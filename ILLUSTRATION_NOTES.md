@@ -19,6 +19,19 @@ The 1917 book (Malcolm) is likely out of copyright and could be a valid source f
 
 ---
 
+## Chapter 3 - Tides
+
+### Possible Reference Sources
+
+The following references from the end of Chapter 3 may be the original source for some illustrations:
+
+1. **Erta Pater: an introduction to the Physics of the Earth**, F.D. Stacey and Paul M. Davis, Cambridge University Press
+2. **Tides: A Scientific History**, D.E. Cartwright, Cambridge University Press
+
+**Action:** Check if any of the Chapter 3 figures originate from these references.
+
+---
+
 ## Chapter 5 - Flow Diagrams with Unknown Origin
 
 Several flow diagrams in Chapter 5 have unknown origins from "the original manuscript". These are currently marked as **Red** status.
@@ -79,6 +92,41 @@ Attempts have been made to recreate these flow diagrams using Python (see `pytho
 | fig_09_15 | Flow round spinning cylinder (backspin) | Red - Unknown origin |
 
 These may be candidates for Python recreation as well.
+
+---
+
+## Low Resolution Images
+
+The following images appear to be low resolution, blurry, or have other quality issues. They may need to be replaced with higher resolution versions.
+
+### Critical - Need Replacement
+
+| Figure | Dimensions | Issue |
+|--------|-----------|-------|
+| fig_04_08b.png | 102x180 | Very small - Fresnel diffraction diagram |
+| fig_09_01a.jpg | 412x232 | Very low res & blurry - Dambusters plane |
+| fig_10_03.png | 300x225 | Low res - Weather map, appears blocky |
+| fig_11_01.jpg | 800x556 | Has watermarks ("sciencephotolibrary") |
+| fig_11_05.png | 320x320 | Low res - Tippe top photo |
+| fig_12_03.png | 680x510 | Has branding (University of Sussex logo) |
+| fig_12_06a.png | nil | File may be corrupted (nil dimensions) |
+| fig_12_06b.png | nil | File may be corrupted (nil dimensions) |
+| fig_13_01a.jpg | 365x300 | Low res - Tacoma Narrows bridge |
+| fig_13_08a.png | 38x113 | Extremely small - O-ring diagram |
+| fig_13_08b.png | 38x113 | Extremely small - O-ring diagram |
+
+### Borderline - May Need Replacement
+
+| Figure | Dimensions | Issue |
+|--------|-----------|-------|
+| fig_03_01a.jpg | 640x426 | Borderline resolution - Normandy landings |
+| fig_06_01a.png | 460x276 | Low res - Family listening to radio |
+| fig_08_01.jpg | 350x525 | Low res - GPS device photo |
+| fig_10_07b.png | 402x503 | Small but acceptable (line drawing) |
+| fig_10_09a.png | 291x646 | Blocky/compressed - Hugh on bicycle |
+| fig_10_11.png | 545x436 | Borderline - Gyrocompass diagram |
+| fig_10_12a.png | 503x388 | Low res - Earth oblate spheroid |
+| fig_13_06.png | 230x525 | Small but acceptable (line drawing) |
 
 ---
 
