@@ -1,84 +1,37 @@
-EXTERNAL LINKS FROM ARCHIE BOOK FIGURE LINKS.CSV
+EXTERNAL LINKS NOT YET IN IMAGE_SUBMISSION_FINAL.CSV
 ============================================================
-These are external sources (not draw.io/Google Docs self-created assets)
-that may have copyright implications.
+These external sources from Archie book figure links.csv
+do NOT appear in image_submission_final.csv and may need
+to be added with proper attribution/copyright notes.
 ============================================================
 
-Total external links found: 76
+Total missing links: 28
 
-http://creativecommons.org/licenses/by-sa/3.0/
-http://retro-gps.info/files/garmin-gps-38.jpg
 https://admiralcloudberg.medium.com/neither-money-nor-manpower-the-story-of-the-de-havilland-comet-and-the-crash-of-boac-flight-781-36db2a3435ce
-https://arxiv.org/PS_cache/arxiv/pdf/0910/0910.3306v1.pdf
 https://atlantic-cable.com/Article/SciAm/sa2.jpg
 https://collection.sciencemuseumgroup.org.uk/objects/co526895/progress-toy-gyroscope-1950-1960
-https://commons.wikimedia.org/w/index.php?curid=1511764
-https://commons.wikimedia.org/w/index.php?curid=15903390
-https://commons.wikimedia.org/w/index.php?curid=17914256
-https://commons.wikimedia.org/w/index.php?curid=20106950
-https://commons.wikimedia.org/w/index.php?curid=2263487
-https://commons.wikimedia.org/w/index.php?curid=43894484
-https://commons.wikimedia.org/w/index.php?curid=530754
-https://commons.wikimedia.org/w/index.php?curid=5531109
-https://commons.wikimedia.org/w/index.php?curid=65941520
-https://commons.wikimedia.org/w/index.php?curid=808501
-https://commons.wikimedia.org/w/index.php?curid=9084438
-https://commons.wikimedia.org/w/index.php?curid=96605253
-https://commons.wikimedia.org/wiki/File:Cupido4b.jpg
-https://commons.wikimedia.org/wiki/File:Equinoxes-solstice-EN.svg
-https://creativecommons.org/licenses/by-sa/4.0
-https://earthhow.com/earth-tilt/
 https://en.arco-vienna.at/archers-paradox.html
-https://en.wikipedia.org/wiki/Equation_of_time
-https://en.wikipedia.org/wiki/File:Tacoma-narrows-bridge-collapse.jpg
-https://en.wikipedia.org/wiki/Injector
-https://en.wikipedia.org/wiki/M%C3%B6hne_Reservoir#/media/File:Mohne_Dam_Breached.jpg
-https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster#/media/File:Challenger_explosion.jpg
-https://en.wikipedia.org/wiki/The_Blue_Marble#/media/File:The_Earth_seen_from_Apollo_17.jpg
-https://en.wikipedia.org/wiki/Whitechapel_Bell_Foundry
-https://landinginnormandy.blogspot.com/2013/02/fishing-on-foot-in-france.html
 https://link.springer.com/chapter/10.1007/978-3-030-44787-8_2
 https://media.neliti.com/media/publications/119624-ID-estimasi-citra-polarisasi-langit.pdf
 https://medium.com/@pslcricketmaza/where-to-place-wi-fi-router-for-best-internet-speed-9d784e5e3377
-https://physics.stackexchange.com/questions/213290/intuitive-explanation-of-tippe-top-effect
 https://picryl.com/media/hydraulic-capstan-c-and-a-musker-ltd-1901-ef69b9
 https://pmt.physicsandmathstutor.com/download/Physics/A-level/Notes/OCR-A-Old/Unit-2/Set-A/2.4.3%20Interference%20A.pdf
-https://sailingissues.com/chart-symbols/idealized-tidal-lunar-bulges75.png
-https://studentpilotguide.co.uk/what-is-a-pitot/
 https://uk.rs-online.com/web/p/twisted-pair-multicore-data-cable/8124693
 https://upload.wikimedia.org/wikipedia/commons/6/6f/RogersCommission-v1p57.jpg
 https://upload.wikimedia.org/wikipedia/commons/d/d0/Equinoxes-solstice-EN.svg
 https://web.archive.org/web/20160112123725/http://grin.hq.nasa.gov/ABSTRACTS/GPN-2000-001138.html
 https://www.bbc.co.uk/news/uk-england-leicestershire-68246524
-https://www.chegg.com/homework-help/questions-and-answers/4-following-plot-shows-vapor-pressure-selected-elements-function-temperature--elements-lis-q45173902
-https://www.chegg.com/homework-help/questions-and-answers/greatest-instantaneous-acceleration-person-survive-25g-g-acceleration-free-fall-climber-s--q2828660
 https://www.emirates.com/media-centre/emirates-to-receive-final-a380-in-november/
 https://www.exploratorium.edu/snacks/coupled-resonant-pendulums-2/print
 https://www.facebook.com/britishmuseum/posts/-today-is-the-summer-solstice-the-longest-day-of-the-year-in-the-northern-hemisp/10159935485264723/
 https://www.facebook.com/photo/?fbid=10152531480905695&set=p.10152531480905695
 https://www.flickr.com/photos/nasa2explore/10697912315/in/album-72157630719371642/
 https://www.ice-imagelibrary.com/image/1084/the-ss-great-eastern-under-way-23-july-1865
-https://www.leedeforest.org/The_Audion.html
-https://www.met.ie/climate/climate-of-ireland
 https://www.nasa.gov/multimedia/imagegallery/image_feature_329.html
-https://www.opencambridge.cam.ac.uk/events/wren-library
 https://www.pharmaceutical-technology.com/sponsored/single-use-plastics-pharma/
-https://www.popularmechanics.com/science/a43699474/scientists-created-the-fattest-schrodingers-cat-ever/
-https://www.researchgate.net/figure/Greatly-exaggerated-mode-shapes-for-a-circular-membrane-with-radius-a-The-top-row_fig3_346002108
-https://www.researchgate.net/figure/Skimming-stones_fig1_301688410
-https://www.researchgate.net/publication/262569642_Wavelet_neural_network_applied_for_prognostication_of_contact_pressure_between_soil_and_driving_wheel/figures
-https://www.royalscotcrystal.com/daffodils-round-perfume-atomiser-gold-puffer-gift-boxed.html
-https://www.sciencephoto.com/media/325678/view/formation-of-the-moon
-https://www.sciencephoto.com/media/996980/view/leon-foucault-pendulum-experiment-1851
 https://www.shutterstock.com/image-vector/line-historic-log-heater-hearth-object-1496593727
-https://www.tec-science.com/wp-content/uploads/2021/03/en-stationary-to-planetary-gear-nomenclature.jpg
 https://www.theguardian.com/culture/2009/may/06/radio-head-zoe-williams
-https://www.twinkl.co.uk/parenting-wiki/earth
 https://www.worthpoint.com/worthopedia/antique-double-circle-gyroscope-made-1900629947
-https://www.zmescience.com/future/internet-backbone-undersea-cables/
-https://www3.eng.cam.ac.uk/~hemh1/gyroscopes/videoseven.html
-https://www3.eng.cam.ac.uk/~hemh1/tv.htm#DAMBUSTERS
-https://www3.eng.cam.ac.uk/~hemh1/tv.htm#slinkies
 https://x.com/PhysicsAtSussex/status/1471522760161644551
 https://xkcd.com/123/
 https://youtu.be/pdMZjssrAlk
