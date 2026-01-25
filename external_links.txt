@@ -7,112 +7,115 @@ to be added with proper attribution/copyright notes.
 
 Total missing links: 28
 
-[Fig. 13.1]
-  https://admiralcloudberg.medium.com/neither-money-nor-manpower-the-story-of-the-de-havilland-comet-and-the-crash-of-boac-flight-781-36db2a3435ce
-  Context: ,Fig. 13.1. Well-known engineering failures. (a) The Tacoma Narrows Bridge and (...
-
-[Fig. 2.5]
-  https://atlantic-cable.com/Article/SciAm/sa2.jpg
-  Context: ,Fig. 2.5. A typical received signal (1922 Scientific American).,https://atlanti...
-
-[Fig. 10.14]
-  https://collection.sciencemuseumgroup.org.uk/objects/co526895/progress-toy-gyroscope-1950-1960
-  Context: ,Fig. 10.14. A gyroscope on a cone of height h and radius a   OUP:  NOT SURE WHE...
-
-[Fig. 13.10]
-  https://en.arco-vienna.at/archers-paradox.html
-  Context: ,Fig.13.10 An arrow when released is subject to a high axial force and it will b...
-
-[Fig. 11.2]
-  https://link.springer.com/chapter/10.1007/978-3-030-44787-8_2
-  Context: ,Fig. 11.2.  A coupled pair of pendulums   OUP:  NOT SURE WHERE THIS IMAGE IS FR...
-
-[Fig. 4.10]
-  https://media.neliti.com/media/publications/119624-ID-estimasi-citra-polarisasi-langit.pdf
-  Context: ,Fig. 4.10. The polarisation pattern around the sun,Very poor quality - taken fr...
-
-[Fig. 6.1]
-  https://medium.com/@pslcricketmaza/where-to-place-wi-fi-router-for-best-internet-speed-9d784e5e3377
-  Context: ,"Fig. 6.1. The “wireless”, then and now!","https://www.theguardian.com/culture/...
-
 [Fig. 1.1]
   https://picryl.com/media/hydraulic-capstan-c-and-a-musker-ltd-1901-ef69b9
-  Context: ,"Fig. 1.1 Hydraulic capstan, Liverpool 1901.",https://picryl.com/media/hydrauli...
-
-[Fig. 4.9]
-  https://pmt.physicsandmathstutor.com/download/Physics/A-level/Notes/OCR-A-Old/Unit-2/Set-A/2.4.3%20Interference%20A.pdf
-  Context: ,"Fig. 4.9. Two point sources of light together form a dipole, which gives rise ...
+  Context: Fig. 1.1 Hydraulic capstan, Liverpool 1901
 
 [Fig. 2.1]
   https://uk.rs-online.com/web/p/twisted-pair-multicore-data-cable/8124693
-  Context: ,Fig. 2.1. A sub-ocean cable,"https://www.zmescience.com/future/internet-backbon...
-
-[Fig. 13.7]
-  https://upload.wikimedia.org/wikipedia/commons/6/6f/RogersCommission-v1p57.jpg
-  Context: ,Fig 13.7. The Challenger disaster. (a) The aftermath of the explosion and (b) t...
-
-[Fig. 12.4]
-  https://upload.wikimedia.org/wikipedia/commons/d/d0/Equinoxes-solstice-EN.svg
-  Context: ,Fig. 12.4. An illustration of the sun orbiting the earth (an earth-centred fram...
-
-[Fig. 8.1]
-  https://web.archive.org/web/20160112123725/http://grin.hq.nasa.gov/ABSTRACTS/GPN-2000-001138.html
-  Context: ,"Fig. 8.1. A Garmin GPS38, purchased in 1996.  I wonder if it still works?   HU...
-
-[UNKNOWN]
-  https://www.bbc.co.uk/news/uk-england-leicestershire-68246524
-
-[Fig. 5.1]
-  https://www.emirates.com/media-centre/emirates-to-receive-final-a380-in-november/
-  Context: ,Fig. 5.1. The Airbus 380   OUP:  I DON'T KNOW WHERE THESE IMAGES COME FROM,"htt...
-
-[Fig. 11.4]
-  https://www.exploratorium.edu/snacks/coupled-resonant-pendulums-2/print
-  Context: ,Fig. 11.4.  A coupled pendulum experiment with string and coins.  OUP:  NOT SUR...
-
-[Fig. 12.1]
-  https://www.facebook.com/britishmuseum/posts/-today-is-the-summer-solstice-the-longest-day-of-the-year-in-the-northern-hemisp/10159935485264723/
-  Context: x,Fig.12.1. Stonehenge    OUP:  NOT SURE WHERE THIS IMAGE IS FROM,https://www.fa...
-
-[Fig. 5.1]
-  https://www.facebook.com/photo/?fbid=10152531480905695&set=p.10152531480905695
-  Context: ,Fig. 5.1. The Airbus 380   OUP:  I DON'T KNOW WHERE THESE IMAGES COME FROM,"htt...
-
-[Fig. 13.7]
-  https://www.flickr.com/photos/nasa2explore/10697912315/in/album-72157630719371642/
-  Context: ,Fig 13.7. The Challenger disaster. (a) The aftermath of the explosion and (b) t...
+  Context: Fig. 2.1. A sub-ocean cable
 
 [Fig. 2.2]
   https://www.ice-imagelibrary.com/image/1084/the-ss-great-eastern-under-way-23-july-1865
-  Context: ,Fig. 2.2. The Great Eastern setting out from Ireland trailing the Cable. The pu...
+  Context: Fig. 2.2. The Great Eastern setting out from Ireland
 
-[Fig. 8.1]
-  https://www.nasa.gov/multimedia/imagegallery/image_feature_329.html
-  Context: ,"Fig. 8.1. A Garmin GPS38, purchased in 1996.  I wonder if it still works?   HU...
-
-[UNKNOWN]
-  https://www.pharmaceutical-technology.com/sponsored/single-use-plastics-pharma/
-
-[UNKNOWN]
-  https://www.shutterstock.com/image-vector/line-historic-log-heater-hearth-object-1496593727
-
-[Fig. 6.1]
-  https://www.theguardian.com/culture/2009/may/06/radio-head-zoe-williams
-  Context: ,"Fig. 6.1. The “wireless”, then and now!","https://www.theguardian.com/culture/...
-
-[Fig. 10.13]
-  https://www.worthpoint.com/worthopedia/antique-double-circle-gyroscope-made-1900629947
-  Context: ,Fig. 10.13. The bulge on the earth is represented by discrete masses. Forces on...
-
-[Fig. 12.3]
-  https://x.com/PhysicsAtSussex/status/1471522760161644551
-  Context: x,"Fig. 12.3.  Sunrise, noon and sunset around the winter solstice.",https://x.c...
+[Fig. 2.5]
+  https://atlantic-cable.com/Article/SciAm/sa2.jpg
+  Context: Fig. 2.5. A typical received signal (1922 Scientific American)
 
 [Fig. 3.2]
   https://xkcd.com/123/
-  Context: ,Fig. 3.2. The centrifugal/centripetal force debate.,https://xkcd.com/123/,Possi...
+  Context: Fig. 3.2. The centrifugal/centripetal force debate
+
+[Fig. 4.9]
+  https://pmt.physicsandmathstutor.com/download/Physics/A-level/Notes/OCR-A-Old/Unit-2/Set-A/2.4.3%20Interference%20A.pdf
+  Context: Fig. 4.9. Two point sources of light - interference
+
+[Fig. 4.10]
+  https://media.neliti.com/media/publications/119624-ID-estimasi-citra-polarisasi-langit.pdf
+  Context: Fig. 4.10. The polarisation pattern around the sun
+
+[Fig. 5.1]
+  https://www.emirates.com/media-centre/emirates-to-receive-final-a380-in-november/
+  Context: Fig. 5.1. The Airbus 380
+
+[Fig. 5.1]
+  https://www.facebook.com/photo/?fbid=10152531480905695&set=p.10152531480905695
+  Context: Fig. 5.1. The Airbus 380 (alt)
+
+[Fig. 6.1]
+  https://medium.com/@pslcricketmaza/where-to-place-wi-fi-router-for-best-internet-speed-9d784e5e3377
+  Context: Fig. 6.1. The wireless - wifi router image
+
+[Fig. 6.1]
+  https://www.theguardian.com/culture/2009/may/06/radio-head-zoe-williams
+  Context: Fig. 6.1. The wireless - guardian image
+
+[Fig. 8.2]
+  https://web.archive.org/web/20160112123725/http://grin.hq.nasa.gov/ABSTRACTS/GPN-2000-001138.html
+  Context: Fig. 8.2. NASA Blue Marble reference
+
+[Fig. 8.2]
+  https://www.nasa.gov/multimedia/imagegallery/image_feature_329.html
+  Context: Fig. 8.2. NASA image reference
 
 [Fig. 10.4]
   https://youtu.be/pdMZjssrAlk
-  Context: ,Fig. 10.4. Does water go down a plughole in the opposite direction in Australia...
+  Context: Fig. 10.4. Does water go down a plughole in the opposite direction in Australia
+
+[Fig. 10.14]
+  https://collection.sciencemuseumgroup.org.uk/objects/co526895/progress-toy-gyroscope-1950-1960
+  Context: Fig. 10.14. A gyroscope on a cone
+
+[Fig. 10.14]
+  https://www.worthpoint.com/worthopedia/antique-double-circle-gyroscope-made-1900629947
+  Context: Fig. 10.14. Gyroscope (alt source)
+
+[Fig. 11.2]
+  https://link.springer.com/chapter/10.1007/978-3-030-44787-8_2
+  Context: Fig. 11.2. A coupled pair of pendulums
+
+[Fig. 11.4]
+  https://www.exploratorium.edu/snacks/coupled-resonant-pendulums-2/print
+  Context: Fig. 11.4. A coupled pendulum experiment
+
+[Fig. 12.1]
+  https://www.facebook.com/britishmuseum/posts/-today-is-the-summer-solstice-the-longest-day-of-the-year-in-the-northern-hemisp/10159935484264723/
+  Context: Fig. 12.1. Stonehenge
+
+[Fig. 12.3]
+  https://x.com/PhysicsAtSussex/status/1471522760161644551
+  Context: Fig. 12.3. Sunrise, noon and sunset around the winter solstice
+
+[Fig. 12.4]
+  https://upload.wikimedia.org/wikipedia/commons/d/d0/Equinoxes-solstice-EN.svg
+  Context: Fig. 12.4. Sun orbiting the earth - equinoxes/solstices
+
+[Fig. 13.1]
+  https://admiralcloudberg.medium.com/neither-money-nor-manpower-the-story-of-the-de-havilland-comet-and-the-crash-of-boac-flight-781-36db2a3435ce
+  Context: Fig. 13.1. Well-known engineering failures. (a) The Tacoma Narrows Bridge and (b) the De Havilland Comet
+
+[Fig. 13.7]
+  https://upload.wikimedia.org/wikipedia/commons/6/6f/RogersCommission-v1p57.jpg
+  Context: Fig. 13.7. The Challenger disaster - Rogers Commission
+
+[Fig. 13.7]
+  https://www.flickr.com/photos/nasa2explore/10697912315/in/album-72157630719371642/
+  Context: Fig. 13.7. The Challenger disaster - NASA flickr
+
+[Fig. 13.10]
+  https://en.arco-vienna.at/archers-paradox.html
+  Context: Fig. 13.10 An arrow when released is subject to a high axial force
+
+[UNKNOWN]
+  https://www.bbc.co.uk/news/uk-england-leicestershire-68246524
+  Context: UNKNOWN - BBC news
+
+[UNKNOWN]
+  https://www.pharmaceutical-technology.com/sponsored/single-use-plastics-pharma/
+  Context: UNKNOWN - pharmaceutical technology
+
+[UNKNOWN]
+  https://www.shutterstock.com/image-vector/line-historic-log-heater-hearth-object-1496593727
+  Context: UNKNOWN - shutterstock furnace
 
