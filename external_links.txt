@@ -85,7 +85,7 @@ Total missing links: 28
 
 [Fig. 11.2]
   https://link.springer.com/chapter/10.1007/978-3-030-44787-8_2
-  Context: Fig. 11.2. A coupled pair of pendulums
+  Context: Fig. 11.2. A coupled pair of pendulums - On page 126 of book (162 of pdf)
 
 [Fig. 11.4]
   https://www.exploratorium.edu/snacks/coupled-resonant-pendulums-2/print
