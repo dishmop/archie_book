@@ -153,12 +153,6 @@ The following figures have been replaced with self-created Python versions. Thes
 | fig_04_13.png | Rayleigh distribution (Probability vs Radius) | `fig_04_13_rayleigh.py` | P(r) ∝ r × exp(-2r²/σ²) curve |
 | fig_04_14.png | Brewster angle / refraction diagram | `fig_04_14_brewster.py` | Shows incident, reflected, and refracted rays with polarization arrows |
 
-### Chapter 5
-
-| Figure | Description | Python Script | Notes |
-|--------|-------------|---------------|-------|
-| fig_05_04.png | Potential flow round inclined flat plate | `fig_05_04_flat_plate.py` | Rainbow streamlines using elliptic coordinates |
-
 All Python scripts are located in `/python_flow_figures/` directory.
 
 ---
