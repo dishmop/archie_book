@@ -21,8 +21,8 @@ fig_01_14b.svg,1,14b,Self-created,Green,Fig. 1.14. Exaggerated clearance between
 fig_01_14c.svg,1,14c,Self-created,Green,Fig. 1.14. Exaggerated clearance between the crank and pedal threads.
 fig_01_15a.svg,1,15a,Self-created,Green,Fig. 1.15. The R-L circuit model of a dynamo and the voltage generated for slow and fast cycling.
 fig_01_15b.svg,1,15b,Self-created,Green,Fig. 1.15. The R-L circuit model of a dynamo and the voltage generated for slow and fast cycling.
-fig_02_01a.jpg,2,1a,zmescience.com / RS Online,Amber,Fig. 2.1. A sub-ocean cable,"CHECK: Chapter 2 references may be source - (1) The Atlantic Cable, Bern Dibner, 1959 (2) The Theory of the Submarine Telegraph and Telephone Cable, H.W. Malcolm, 1917. The 1917 book may be out of copyright."
-fig_02_01b.png,2,1b,zmescience.com / RS Online,Amber,Fig. 2.1. A sub-ocean cable,"CHECK: See note on fig_02_01a - Chapter 2 references may be original source."
+fig_02_01a.jpg,2,1a,zmescience.com / RS Online,Amber,Fig. 2.1. A sub-ocean cable,
+fig_02_01b.png,2,1b,zmescience.com / RS Online,Amber,Fig. 2.1. A sub-ocean cable,
 fig_02_02.jpg,2,2,ICE Image Library,Amber,Fig. 2.2. The Great Eastern setting out from Ireland trailing the Cable. The pulses were broadened significantly on arrival and Kelvin explained this by treating the cable as a distributed R-C circuit.  About six to eight words per minute could be sent.
 fig_02_03.svg,2,3,Self-created,Green,"Fig. 2.3.  Heaviside’s circuit model of a cable, which now appears in every undergraduate course of electrical engineering.  The parameters per unit length are a resistance R, an inductance L, a capacitance C and a leakage conductance G."
 fig_02_04.png,2,4,Self-created,Green,Fig. 2.4. The input and output voltage of a rectangular unit pulse lasting 0.1 seconds. A 1 volt input voltage for 0.1 seconds (red) and the result at the far end of the cable (blue).
