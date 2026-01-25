@@ -126,18 +126,38 @@ def plot_flow(X, Y, psi, a, alpha_deg, n_lines=40):
     fig, ax = plt.subplots(figsize=(10, 12))
 
     psi_valid = psi[np.isfinite(psi)]
-    # Original colormap goes: magenta(bottom) -> blue -> cyan -> green -> yellow -> red(top)
-    # This matches the 'rainbow' colormap but we need to check the mapping
-    psi_min = np.percentile(psi_valid, 1)
-    psi_max = np.percentile(psi_valid, 99)
+    # We want the plate (around y=0, psi≈0) to be in the BLUE region
+    # Rainbow colormap: violet(0) -> blue(0.2) -> cyan(0.4) -> green(0.5) -> yellow(0.7) -> red(1)
+    #
+    # Strategy: use full data range for levels, but stretch/shift the colormap
+    # so that psi=0 maps to blue while keeping full color range
 
-    levels = np.linspace(psi_min, psi_max, n_lines)
+    # Get the actual data range
+    psi_max_data = np.percentile(psi_valid, 99)
+    psi_min_data = np.percentile(psi_valid, 1)
 
-    # The original appears to use HSV-like coloring with red at top, going through
-    # yellow, green, cyan, blue to magenta at bottom
-    # rainbow colormap: violet(0)->blue->cyan->green->yellow->red(1)
-    # So rainbow with reversed levels should work, OR we reverse the color assignment
-    colors = plt.cm.rainbow(np.linspace(0, 1, len(levels)))
+    # Use full data range for levels
+    levels = np.linspace(psi_min_data, psi_max_data, n_lines)
+
+    # For each level, compute what color it should get
+    # We want: psi_min_data -> violet (0), psi=0 -> blue (0.2), psi_max_data -> red (1)
+    # This requires a non-linear mapping
+    #
+    # Simple approach: linearly interpolate in two segments
+    # Segment 1: psi_min to 0 maps to color 0 to 0.2
+    # Segment 2: 0 to psi_max maps to color 0.2 to 1.0
+
+    color_fracs = np.zeros(len(levels))
+    for i, lev in enumerate(levels):
+        if lev <= 0:
+            # Map [psi_min, 0] to [0, 0.2]
+            color_fracs[i] = 0.2 * (lev - psi_min_data) / (0 - psi_min_data) if psi_min_data != 0 else 0.2
+        else:
+            # Map [0, psi_max] to [0.2, 1.0]
+            color_fracs[i] = 0.2 + 0.8 * (lev - 0) / (psi_max_data - 0) if psi_max_data != 0 else 0.2
+
+    # Rainbow colormap
+    colors = plt.cm.rainbow(color_fracs)
 
     for level, color in zip(levels, colors):
         cs = ax.contour(X, Y, psi, levels=[level], colors=[color], linewidths=1.5, linestyles='solid')
