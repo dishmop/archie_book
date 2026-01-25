@@ -56,22 +56,28 @@ def compute_flow_in_plate_coords(a=2.0, alpha_deg=28, U=1.0, ngrid=800):
     # Make ν negative below the x-axis for continuity
     nu = np.where(Y < 0, -nu, nu)
 
-    # For horizontal flow at infinity AFTER rotation to physical coords:
-    # Physical coords: y_phys = x*sin(α) + y*cos(α)  (where x,y are plate coords)
-    # We need ψ → U * y_phys at infinity
+    # For horizontal flow (in physical coords) past an inclined plate:
+    # After rotation, we want ψ → U*y_physical at infinity
+    # y_physical = x*sin(α) + y*cos(α) in plate coords
     #
-    # In plate coords at large distance:
-    # x ≈ a*cosh(μ)*cos(ν) ≈ (a/2)*exp(μ)*cos(ν)
-    # y ≈ a*sinh(μ)*sin(ν) ≈ (a/2)*exp(μ)*sin(ν)
+    # The stream function that:
+    # 1. Has plate (μ=0) as streamline ψ=0
+    # 2. Has stagnation points at plate edges (ν=0 and ν=π)
+    # 3. Gives horizontal flow at infinity after rotation
     #
-    # So y_phys = (a/2)*exp(μ)*[cos(ν)*sin(α) + sin(ν)*cos(α)]
-    #           = (a/2)*exp(μ)*sin(ν + α)
-    #
-    # The stream function with plate as streamline and this far-field behavior:
     # ψ = U*a*sinh(μ)*sin(ν + α)
     #
-    # Check: at μ=0 (on plate), sinh(0)=0, so ψ=0. ✓ Plate is streamline.
-    # At large μ: ψ ≈ U*(a/2)*exp(μ)*sin(ν + α) = U*y_phys ✓
+    # At plate edges (μ→0): ψ → 0 regardless of ν (since sinh(0)=0)
+    # So the stagnation streamline ψ=0 runs along the PLATE, not through its tips.
+    #
+    # For stagnation points AT the tips, we need ψ=0 to approach the tips from the flow.
+    # This requires a different formulation. The stagnation streamline in physical
+    # coords is ψ = U*y_stagnation where y_stagnation is the y-value of incoming flow
+    # that hits the plate.
+    #
+    # Actually, for an inclined flat plate in uniform flow, stagnation points ARE at
+    # the plate edges, and the stagnation streamline ψ=ψ_stag connects them.
+    # The value ψ_stag is NOT zero - it's the streamline that arrives at the plate.
 
     psi = U * a * np.sinh(mu) * np.sin(nu + alpha)
 
@@ -136,8 +142,15 @@ def plot_flow(X, Y, psi, a, alpha_deg, n_lines=40):
     psi_max_data = np.percentile(psi_valid, 99)
     psi_min_data = np.percentile(psi_valid, 1)
 
-    # Use full data range for levels
-    levels = np.linspace(psi_min_data, psi_max_data, n_lines)
+    # Create evenly spaced levels with psi=0 as one of them
+    # All other streamlines should be evenly spaced around psi=0
+    interval = (psi_max_data - psi_min_data) / n_lines
+    # Generate levels going negative from 0
+    levels_negative = np.arange(0, psi_min_data - interval, -interval)[1:][::-1]  # exclude 0, will add it back
+    # Generate levels going positive from 0
+    levels_positive = np.arange(0, psi_max_data + interval, interval)[1:]  # exclude 0
+    # Combine: negative levels + psi=0 + positive levels
+    levels = np.concatenate([levels_negative, [0.0], levels_positive])
 
     # For each level, compute what color it should get
     # We want: psi_min_data -> violet (0), psi=0 -> blue (0.2), psi_max_data -> red (1)
@@ -199,14 +212,14 @@ if __name__ == "__main__":
 
     # Step 1: Compute in plate coordinates
     X_plate, Y_plate, psi_plate = compute_flow_in_plate_coords(
-        a=plate_half_length, alpha_deg=plate_angle, ngrid=800)
+        a=plate_half_length, alpha_deg=plate_angle, U=1.0, ngrid=800)
 
     # Step 2: Rotate to physical coordinates
     X_phys, Y_phys, psi_phys = rotate_to_physical_coords(
         X_plate, Y_plate, psi_plate, plate_half_length, plate_angle, ngrid_out=600)
 
     # Step 3: Plot
-    fig, ax = plot_flow(X_phys, Y_phys, psi_phys, plate_half_length, plate_angle, n_lines=40)
+    fig, ax = plot_flow(X_phys, Y_phys, psi_phys, plate_half_length, plate_angle, n_lines=50)
 
     plt.savefig('/Users/diarmidcampbell/Desktop/Archies book project/python_flow_figures/fig_05_04_output.png',
                 dpi=150, bbox_inches='tight', facecolor='white')
