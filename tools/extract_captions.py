@@ -1,0 +1,257 @@
+#!/usr/bin/env python3
+"""Extract figure captions from original CSV and create final submission CSV."""
+import csv
+import re
+
+# Read original CSV to extract figure captions
+captions = {}
+with open("/Users/diarmidcampbell/Desktop/Archies book project/Archie book figure links.csv", 'r', encoding='utf-8-sig') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        if len(row) > 1 and row[1]:
+            # Look for figure references like "Fig. 1.1" or "Fig 1.1" or "Figure 1.1"
+            match = re.match(r'^(Fig\.?\s*|Figure\s*)(\d+)\.(\d+[a-z]?)[.\s]*(.*)', row[1], re.IGNORECASE)
+            if match:
+                chapter = match.group(2)
+                fig_num = match.group(3)
+                caption = match.group(4).strip()
+                # Full caption is the figure reference plus description
+                full_caption = row[1].strip()
+                # Create key like "1_1" or "1_1a"
+                key = f"{chapter}_{fig_num}"
+                if key not in captions:
+                    captions[key] = full_caption
+
+# Define mapping data with sources and copyright status
+figures_data = [
+    ("fig_01_01.jpg", 1, 1, "", "Picryl (Public Domain)", "Green"),
+    ("fig_01_02.svg", 1, 2, "", "Google Docs (self-created)", "Green"),
+    ("fig_01_03.svg", 1, 3, "", "Google Docs (self-created)", "Green"),
+    ("fig_01_04.svg", 1, 4, "", "Google Docs (self-created)", "Green"),
+    ("fig_01_05a.svg", 1, "5a", "", "draw.io (self-created)", "Green"),
+    ("fig_01_05b.svg", 1, "5b", "", "draw.io (self-created)", "Green"),
+    ("fig_01_06a.svg", 1, "6a", "", "draw.io (self-created)", "Green"),
+    ("fig_01_06b.svg", 1, "6b", "", "draw.io (self-created)", "Green"),
+    ("fig_01_07.svg", 1, 7, "", "draw.io (self-created)", "Green"),
+    ("fig_01_08.svg", 1, 8, "", "draw.io (self-created)", "Green"),
+    ("fig_01_09a.svg", 1, "9a", "", "draw.io (self-created)", "Green"),
+    ("fig_01_09b.svg", 1, "9b", "", "draw.io (self-created)", "Green"),
+    ("fig_01_10a.png", 1, "10a", "", "GIMP (self-created)", "Green"),
+    ("fig_01_10b.png", 1, "10b", "", "GIMP (self-created)", "Green"),
+    ("fig_01_11.jpg", 1, 11, "", "tec-science.com", "Red"),
+    ("fig_01_12.svg", 1, 12, "", "draw.io (self-created)", "Green"),
+    ("fig_01_13.svg", 1, 13, "", "draw.io (self-created)", "Green"),
+    ("fig_01_14a.svg", 1, "14a", "", "draw.io (self-created)", "Green"),
+    ("fig_01_14b.svg", 1, "14b", "", "draw.io (self-created)", "Green"),
+    ("fig_01_14c.svg", 1, "14c", "", "draw.io (self-created)", "Green"),
+    ("fig_01_15a.svg", 1, "15a", "", "draw.io (self-created)", "Green"),
+    ("fig_01_15b.svg", 1, "15b", "", "draw.io (self-created)", "Green"),
+    ("fig_02_01a.jpg", 2, "1a", "", "zmescience.com / RS Online", "Red"),
+    ("fig_02_01b.png", 2, "1b", "", "zmescience.com / RS Online", "Red"),
+    ("fig_02_02.jpg", 2, 2, "", "ICE Image Library", "Amber"),
+    ("fig_02_03.svg", 2, 3, "", "draw.io (self-created)", "Green"),
+    ("fig_02_04.png", 2, 4, "", "Hugh (self-created)", "Green"),
+    ("fig_02_05.jpg", 2, 5, "", "1922 Scientific American", "Amber"),
+    ("fig_02_06.png", 2, 6, "", "Hugh (self-created)", "Green"),
+    ("fig_02_07.svg", 2, 7, "", "draw.io (self-created)", "Green"),
+    ("fig_02_08.png", 2, 8, "", "Original manuscript (edited)", "Green"),
+    ("fig_02_09a.jpg", 2, "9a", "", "Wikimedia Commons - Public Domain", "Green"),
+    ("fig_02_09b.png", 2, "9b", "", "Self-created", "Green"),
+    ("fig_02_09c.png", 2, "9c", "", "Self-created", "Green"),
+    ("fig_03_01a.jpg", 3, "1a", "", "landinginnormandy.blogspot.com", "Amber"),
+    ("fig_03_01b.jpg", 3, "1b", "", "Wikimedia Commons - Public Domain", "Green"),
+    ("fig_03_02.png", 3, 2, "", "xkcd", "Amber"),
+    ("fig_03_03.svg", 3, 3, "", "Google Docs (self-created)", "Green"),
+    ("fig_03_04.svg", 3, 4, "", "Google Docs (self-created)", "Green"),
+    ("fig_03_05.svg", 3, 5, "", "draw.io (self-created)", "Green"),
+    ("fig_03_06.svg", 3, 6, "", "draw.io (self-created)", "Green"),
+    ("fig_03_07.svg", 3, 7, "", "draw.io (self-created)", "Green"),
+    ("fig_03_08.svg", 3, 8, "", "draw.io (self-created)", "Green"),
+    ("fig_03_09a.svg", 3, "9a", "", "draw.io (self-created)", "Green"),
+    ("fig_03_09b.svg", 3, "9b", "", "draw.io (self-created)", "Green"),
+    ("fig_03_09c.svg", 3, "9c", "", "draw.io (self-created)", "Green"),
+    ("fig_03_10.png", 3, 10, "", "Self-created", "Green"),
+    ("fig_04_01.jpg", 4, 1, "", "BBC One Show screenshot", "Red"),
+    ("fig_04_02.jpg", 4, 2, "", "opencambridge.cam.ac.uk", "Amber"),
+    ("fig_04_03.jpg", 4, 3, "", "Wikimedia Commons - CC BY 2.0", "Amber"),
+    ("fig_04_04.jpg", 4, 4, "", "Wikimedia Commons - CC BY 3.0", "Amber"),
+    ("fig_04_05.jpg", 4, 5, "", "NASA - CC BY 2.0", "Amber"),
+    ("fig_04_06.jpg", 4, 6, "", "Wikimedia Commons - CC BY-SA 3.0", "Amber"),
+    ("fig_04_07.jpeg", 4, 7, "", "Wikimedia Commons - CC BY-SA 3.0", "Amber"),
+    ("fig_04_08a.svg", 4, "8a", "", "draw.io (self-created)", "Green"),
+    ("fig_04_08b.png", 4, "8b", "", "GIMP (self-created)", "Green"),
+    ("fig_04_10.jpeg", 4, 10, "", "neliti.com publication", "Amber"),
+    ("fig_04_11.png", 4, 11, "", "Original manuscript", "Green"),
+    ("fig_04_12.png", 4, 12, "", "Original manuscript", "Green"),
+    ("fig_04_13.png", 4, 13, "", "Original manuscript", "Amber"),
+    ("fig_04_14.png", 4, 14, "", "Original manuscript", "Green"),
+    ("fig_05_01a.jpeg", 5, "1a", "", "Unknown source", "Red"),
+    ("fig_05_01b.jpeg", 5, "1b", "", "Unknown source", "Red"),
+    ("fig_05_02a.svg", 5, "2a", "", "draw.io (self-created)", "Green"),
+    ("fig_05_02b.svg", 5, "2b", "", "draw.io (self-created)", "Green"),
+    ("fig_05_03a.svg", 5, "3a", "", "draw.io (self-created)", "Green"),
+    ("fig_05_03b.svg", 5, "3b", "", "draw.io (self-created)", "Green"),
+    ("fig_05_04.png", 5, 4, "", "Original manuscript", "Green"),
+    ("fig_05_05.svg", 5, 5, "", "draw.io (edited from manuscript)", "Green"),
+    ("fig_05_06a.svg", 5, "6a", "", "draw.io (edited from manuscript)", "Green"),
+    ("fig_05_06b.svg", 5, "6b", "", "Original manuscript", "Green"),
+    ("fig_05_06c.svg", 5, "6c", "", "Original manuscript (edited)", "Green"),
+    ("fig_05_07a.png", 5, "7a", "", "Original manuscript", "Green"),
+    ("fig_05_07b.png", 5, "7b", "", "Original manuscript", "Green"),
+    ("fig_05_07c.png", 5, "7c", "", "Original manuscript", "Green"),
+    ("fig_05_08a.png", 5, "8a", "", "Original manuscript", "Green"),
+    ("fig_05_08b.png", 5, "8b", "", "Original manuscript", "Green"),
+    ("fig_05_09.png", 5, 9, "", "Original manuscript", "Green"),
+    ("fig_05_10a.svg", 5, "10a", "", "draw.io (self-created)", "Green"),
+    ("fig_05_10b.svg", 5, "10b", "", "draw.io (self-created)", "Green"),
+    ("fig_05_10c.svg", 5, "10c", "", "draw.io (self-created)", "Green"),
+    ("fig_05_11a.svg", 5, "11a", "", "draw.io (self-created)", "Green"),
+    ("fig_05_11b.svg", 5, "11b", "", "draw.io (self-created)", "Green"),
+    ("fig_05_11c.svg", 5, "11c", "", "draw.io (self-created)", "Green"),
+    ("fig_05_12.png", 5, 12, "", "Original manuscript", "Green"),
+    ("fig_06_01a.png", 6, "1a", "", "The Guardian / Medium", "Amber"),
+    ("fig_06_01b.png", 6, "1b", "", "The Guardian / Medium", "Amber"),
+    ("fig_06_02.svg", 6, 2, "", "Wikimedia Commons - CC BY-SA 3.0", "Amber"),
+    ("fig_06_03a.png", 6, "3a", "", "Hugh (from patent)", "Green"),
+    ("fig_06_03b.png", 6, "3b", "", "Hugh (from patent)", "Green"),
+    ("fig_06_03c.png", 6, "3c", "", "Hugh (from patent)", "Green"),
+    ("fig_06_04a.jpg", 6, "4a", "", "Wikimedia Commons - CC BY-SA 4.0", "Amber"),
+    ("fig_06_04b.png", 6, "4b", "", "Self-created", "Green"),
+    ("fig_06_05a.svg", 6, "5a", "", "draw.io (self-created)", "Green"),
+    ("fig_06_05b.svg", 6, "5b", "", "draw.io (self-created)", "Green"),
+    ("fig_06_06.svg", 6, 6, "", "draw.io (self-created)", "Green"),
+    ("fig_07_01a.jpg", 7, "1a", "", "popularmechanics.com", "Amber"),
+    ("fig_07_01b.png", 7, "1b", "", "Hugh (source unknown)", "Amber"),
+    ("fig_07_02.svg", 7, 2, "", "Self-created", "Green"),
+    ("fig_07_03.png", 7, 3, "", "Chegg", "Red"),
+    ("fig_07_04a.svg", 7, "4a", "", "draw.io (self-created)", "Green"),
+    ("fig_07_04b.svg", 7, "4b", "", "draw.io (self-created)", "Green"),
+    ("fig_07_05a.jpg", 7, "5a", "", "ResearchGate", "Amber"),
+    ("fig_07_05b.png", 7, "5b", "", "ResearchGate", "Amber"),
+    ("fig_08_01.jpg", 8, 1, "", "retro-gps.info", "Red"),
+    ("fig_08_02.png", 8, 2, "", "Self-created with NASA PD image", "Green"),
+    ("fig_08_03.svg", 8, 3, "", "draw.io (self-created)", "Green"),
+    ("fig_08_04.jpeg", 8, 4, "", "Original manuscript", "Green"),
+    ("fig_09_01a.jpg", 9, "1a", "", "Channel 4 documentary", "Amber"),
+    ("fig_09_01b.jpg", 9, "1b", "", "Wikimedia Commons - Public Domain", "Green"),
+    ("fig_09_02.svg", 9, 2, "", "draw.io (self-created)", "Green"),
+    ("fig_09_03a.svg", 9, "3a", "", "draw.io (self-created)", "Green"),
+    ("fig_09_03b.svg", 9, "3b", "", "draw.io (self-created)", "Green"),
+    ("fig_09_03c.svg", 9, "3c", "", "draw.io (self-created)", "Green"),
+    ("fig_09_04a.png", 9, "4a", "", "Original manuscript (edited)", "Green"),
+    ("fig_09_04b.png", 9, "4b", "", "Original manuscript", "Green"),
+    ("fig_09_05a.svg", 9, "5a", "", "draw.io (self-created)", "Green"),
+    ("fig_09_05b.png", 9, "5b", "", "studentpilotguide.co.uk", "Red"),
+    ("fig_09_06a.svg", 9, "6a", "", "draw.io (self-created)", "Green"),
+    ("fig_09_06b.svg", 9, "6b", "", "draw.io (self-created)", "Green"),
+    ("fig_09_07a.jpg", 9, "7a", "", "Hugh", "Green"),
+    ("fig_09_07b.jpg", 9, "7b", "", "Hugh", "Green"),
+    ("fig_09_07c.jpg", 9, "7c", "", "Hugh", "Green"),
+    ("fig_09_07d.jpg", 9, "7d", "", "arxiv.org paper", "Amber"),
+    ("fig_09_08.svg", 9, 8, "", "Wikipedia - Public Domain", "Green"),
+    ("fig_09_09a.jpg", 9, "9a", "", "Wikimedia Commons - Public Domain", "Green"),
+    ("fig_09_09b.png", 9, "9b", "", "BBC News", "Amber"),
+    ("fig_09_10.jpg", 9, 10, "", "Archie (personal photo)", "Green"),
+    ("fig_09_11a.jpg", 9, "11a", "", "Shutterstock", "Red"),
+    ("fig_09_11b.svg", 9, "11b", "", "draw.io (self-created)", "Green"),
+    ("fig_09_12a.svg", 9, "12a", "", "draw.io (self-created)", "Green"),
+    ("fig_09_12b.svg", 9, "12b", "", "draw.io (self-created)", "Green"),
+    ("fig_09_13a.jpg", 9, "13a", "", "royalscotcrystal.com", "Red"),
+    ("fig_09_13b.png", 9, "13b", "", "Self-created", "Green"),
+    ("fig_09_13c.png", 9, "13c", "", "Self-created", "Green"),
+    ("fig_09_14a.png", 9, "14a", "", "Original manuscript", "Green"),
+    ("fig_09_14b.svg", 9, "14b", "", "draw.io (self-created)", "Green"),
+    ("fig_09_14c.svg", 9, "14c", "", "draw.io (self-created)", "Green"),
+    ("fig_09_14d.svg", 9, "14d", "", "draw.io (self-created)", "Green"),
+    ("fig_09_15.svg", 9, 15, "", "draw.io (edited from manuscript)", "Green"),
+    ("fig_09_16a.svg", 9, "16a", "", "Wikimedia Commons - CC BY-SA 2.5", "Amber"),
+    ("fig_09_16b.png", 9, "16b", "", "Original manuscript", "Green"),
+    ("fig_09_17.jpg", 9, 17, "", "Wikimedia Commons - GFDL 1.2", "Amber"),
+    ("fig_09_18a.png", 9, "18a", "", "Shutterstock", "Red"),
+    ("fig_09_18b.png", 9, "18b", "", "Original manuscript", "Green"),
+    ("fig_09_18c.png", 9, "18c", "", "Original manuscript", "Green"),
+    ("fig_09_19a.png", 9, "19a", "", "Original manuscript", "Green"),
+    ("fig_09_19b.png", 9, "19b", "", "Original manuscript", "Green"),
+    ("fig_09_19c.png", 9, "19c", "", "Original manuscript", "Green"),
+    ("fig_09_20a.png", 9, "20a", "", "Original manuscript", "Green"),
+    ("fig_09_20b.png", 9, "20b", "", "Original manuscript", "Green"),
+    ("fig_10_01.png", 10, 1, "", "Hugh", "Green"),
+    ("fig_10_02a.svg", 10, "2a", "", "draw.io (self-created)", "Green"),
+    ("fig_10_02b.png", 10, "2b", "", "Original manuscript", "Green"),
+    ("fig_10_03.png", 10, 3, "", "Met Office (met.ie)", "Red"),
+    ("fig_10_04.png", 10, 4, "", "YouTube - Matt Parker", "Red"),
+    ("fig_10_05a.jpg", 10, "5a", "", "sciencephoto.com", "Red"),
+    ("fig_10_05b.svg", 10, "5b", "", "draw.io (self-created)", "Green"),
+    ("fig_10_06a.png", 10, "6a", "", "Hugh", "Green"),
+    ("fig_10_06b.svg", 10, "6b", "", "draw.io (self-created)", "Green"),
+    ("fig_10_07a.png", 10, "7a", "", "Hugh (edited in GIMP)", "Green"),
+    ("fig_10_07b.png", 10, "7b", "", "draw.io (self-created)", "Green"),
+    ("fig_10_08.png", 10, 8, "", "Hugh", "Green"),
+    ("fig_10_09a.png", 10, "9a", "", "Hugh (personal photos)", "Green"),
+    ("fig_10_09b.png", 10, "9b", "", "Hugh (personal photos)", "Green"),
+    ("fig_10_10a.png", 10, "10a", "", "ResearchGate", "Amber"),
+    ("fig_10_10b.png", 10, "10b", "", "Original manuscript", "Green"),
+    ("fig_10_11.png", 10, 11, "", "Original manuscript", "Green"),
+    ("fig_10_12a.png", 10, "12a", "", "sailingissues.com", "Amber"),
+    ("fig_10_12b.png", 10, "12b", "", "Original manuscript", "Green"),
+    ("fig_10_13.png", 10, 13, "", "Original manuscript", "Green"),
+    ("fig_10_14a.jpg", 10, "14a", "", "Science Museum / Worthpoint", "Amber"),
+    ("fig_10_14b.jpg", 10, "14b", "", "Original manuscript", "Green"),
+    ("fig_10_14c.png", 10, "14c", "", "Original manuscript", "Green"),
+    ("fig_10_15a.png", 10, "15a", "", "CUED gyroscope website", "Green"),
+    ("fig_10_15b.png", 10, "15b", "", "CUED gyroscope website", "Green"),
+    ("fig_10_15c.png", 10, "15c", "", "CUED gyroscope website", "Green"),
+    ("fig_11_01.jpg", 11, 1, "", "sciencephoto.com", "Red"),
+    ("fig_11_02.png", 11, 2, "", "Springer book", "Amber"),
+    ("fig_11_03a.png", 11, "3a", "", "Original manuscript", "Green"),
+    ("fig_11_03b.png", 11, "3b", "", "Original manuscript", "Green"),
+    ("fig_11_03c.png", 11, "3c", "", "Original manuscript", "Green"),
+    ("fig_11_04.jpg", 11, 4, "", "Exploratorium", "Red"),
+    ("fig_11_05.png", 11, 5, "", "physics.stackexchange.com", "Red"),
+    ("fig_12_01.jpg", 12, 1, "", "Facebook/British Museum", "Amber"),
+    ("fig_12_02.svg", 12, 2, "", "draw.io (edited from manuscript)", "Green"),
+    ("fig_12_03.png", 12, 3, "", "Twitter/PhysicsAtSussex", "Red"),
+    ("fig_12_04.svg", 12, 4, "", "Wikimedia Commons - Public Domain", "Green"),
+    ("fig_12_05.svg", 12, 5, "", "Wikimedia Commons - CC BY-SA 3.0", "Amber"),
+    ("fig_12_06a.png", 12, "6a", "", "draw.io (self-created)", "Green"),
+    ("fig_12_06b.png", 12, "6b", "", "draw.io (self-created)", "Green"),
+    ("fig_13_01a.jpg", 13, "1a", "", "Wikimedia Commons - Public Domain", "Green"),
+    ("fig_13_01b.png", 13, "1b", "", "Matthew Tesch diagram", "Red"),
+    ("fig_13_02.svg", 13, 2, "", "draw.io (self-created)", "Green"),
+    ("fig_13_03.svg", 13, 3, "", "draw.io (from Hugh MATLAB)", "Green"),
+    ("fig_13_04a.svg", 13, "4a", "", "draw.io (self-created)", "Green"),
+    ("fig_13_04b.svg", 13, "4b", "", "draw.io (self-created)", "Green"),
+    ("fig_13_04c.svg", 13, "4c", "", "draw.io (self-created)", "Green"),
+    ("fig_13_04d.svg", 13, "4d", "", "draw.io (self-created)", "Green"),
+    ("fig_13_05.svg", 13, 5, "", "draw.io (self-created)", "Green"),
+    ("fig_13_06.png", 13, 6, "", "CUED Preparatory Problems", "Amber"),
+    ("fig_13_07a.jpg", 13, "7a", "", "Wikimedia Commons - Public Domain", "Green"),
+    ("fig_13_07b.jpg", 13, "7b", "", "Wikimedia Commons - Public Domain", "Green"),
+    ("fig_13_08a.png", 13, "8a", "", "Original manuscript", "Green"),
+    ("fig_13_08b.png", 13, "8b", "", "Original manuscript", "Green"),
+    ("fig_13_09.jpg", 13, 9, "", "Wikimedia Commons - CC BY-SA 3.0", "Amber"),
+    ("fig_13_10.png", 13, 10, "", "arco-vienna.at", "Red"),
+]
+
+# Write final CSV
+with open("/Users/diarmidcampbell/Desktop/Archies book project/image_submission_final.csv", 'w', newline='', encoding='utf-8') as f:
+    writer = csv.writer(f)
+    writer.writerow(['filename', 'chapter', 'figure', 'source', 'copyright_status', 'figure_text'])
+
+    for filename, chapter, fig_num, _, source, status in figures_data:
+        # Build lookup key
+        fig_str = str(fig_num)
+        key = f"{chapter}_{fig_str}"
+
+        # Try to find caption
+        caption = captions.get(key, "")
+        if not caption:
+            # Try without letter suffix
+            if fig_str[-1].isalpha():
+                key_base = f"{chapter}_{fig_str[:-1]}"
+                caption = captions.get(key_base, "")
+
+        writer.writerow([filename, chapter, fig_num, source, status, caption])
+
+print("Final CSV created!")
+print(f"Found {len(captions)} captions from original CSV")

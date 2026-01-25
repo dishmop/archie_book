@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="450"
+   height="280"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="Equinoxes-solstice_EN.svg">
+  <title
+     id="title3675">Equinoxes and solstice</title>
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5174">
+      <stop
+         style="stop-color:#000080;stop-opacity:1;"
+         offset="0"
+         id="stop5176" />
+      <stop
+         style="stop-color:#000080;stop-opacity:0;"
+         offset="1"
+         id="stop5178" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3702">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3704" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3706" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2864"
+       inkscape:persp3d-origin="214.74213 : 90 : 1"
+       inkscape:vp_z="429.48425 : 135 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 135 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3688"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3858"
+       inkscape:persp3d-origin="45.070866 : 13.03937 : 1"
+       inkscape:vp_z="90.141731 : 19.559055 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 19.559055 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3878"
+       inkscape:persp3d-origin="56.444881 : 16.287402 : 1"
+       inkscape:vp_z="112.88976 : 24.431103 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 24.431103 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3897"
+       inkscape:persp3d-origin="95.687004 : 16.287402 : 1"
+       inkscape:vp_z="191.37401 : 24.431103 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 24.431103 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3916"
+       inkscape:persp3d-origin="45 : 12.874016 : 1"
+       inkscape:vp_z="90 : 19.311024 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 19.311024 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3936"
+       inkscape:persp3d-origin="45 : 12.874016 : 1"
+       inkscape:vp_z="90 : 19.311024 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 19.311024 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3956"
+       inkscape:persp3d-origin="45.070866 : 12.755905 : 1"
+       inkscape:vp_z="90.141731 : 19.133858 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 19.133858 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3976"
+       inkscape:persp3d-origin="45.070866 : 12.755905 : 1"
+       inkscape:vp_z="90.141731 : 19.133858 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 19.133858 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3995"
+       inkscape:persp3d-origin="45.070866 : 12.755905 : 1"
+       inkscape:vp_z="90.141731 : 19.133858 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 19.133858 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2875"
+       inkscape:persp3d-origin="13.127953 : 8.7519684 : 1"
+       inkscape:vp_z="26.255905 : 13.127953 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 13.127953 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2903"
+       inkscape:persp3d-origin="30.631891 : 7.4173228 : 1"
+       inkscape:vp_z="61.263783 : 11.125984 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 11.125984 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2922"
+       inkscape:persp3d-origin="30.631891 : 7.4173228 : 1"
+       inkscape:vp_z="61.263783 : 11.125984 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 11.125984 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3702"
+       id="radialGradient3708"
+       cx="54.54591"
+       cy="42.259575"
+       fx="54.54591"
+       fy="42.259575"
+       r="17.341185"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5174"
+       id="linearGradient5184"
+       x1="36.704723"
+       y1="42.259575"
+       x2="72.387093"
+       y2="42.259575"
+       gradientUnits="userSpaceOnUse" />
+    <inkscape:perspective
+       id="perspective3662"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3066"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2938"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="288.58431"
+     inkscape:cy="104.76344"
+     inkscape:document-units="px"
+     inkscape:current-layer="1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="750"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Equinoxes and solstice</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:date>05-31-2010</dc:date>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Inkscape 0.47</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Creativec ommons</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>English</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>equinox</rdf:li>
+            <rdf:li>solstice</rdf:li>
+            <rdf:li>ecliptic</rdf:li>
+            <rdf:li>equatorial plane</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Two equinoxes are shown as the intersection of the ecliptic and celestial Ecuador, and the solstice's times of the year in which the Sun reaches its maximum southern or northern position.</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title />
+          </cc:Agent>
+        </dc:contributor>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Divad</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-150.38555,-79.344631)">
+    <g
+       id="1"
+       transform="translate(150.38555,96.85479)">
+      <text
+         style="font-size:13.80110073px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="-2.9499998"
+         x="10"
+         xml:space="preserve"
+         id="2"> </text>
+      <path
+         d="m 222.79831,78.204266 c -99.42043,0 -180.014351,20.625004 -180.014351,46.050004 0,25.44375 80.593921,46.06875 180.014351,46.06875 99.43918,0 180.01436,-20.625 180.01436,-46.06875 0,-25.425 -80.57518,-46.050004 -180.01436,-46.050004"
+         style="fill:#daeef3;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="3" />
+      <path
+         d="M 198.22751,80.95625 C 121.12136,133.7375 71.017366,194.6375 86.337338,217.00625 101.63856,239.35625 176.55078,214.7 253.67568,161.91875 330.78183,109.1375 380.88583,48.21875 365.56586,25.86875 350.26464,3.5 275.35241,28.15625 198.22751,80.95625"
+         style="fill:none;stroke:#ffc000;stroke-width:1.87514961px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
+         id="4" />
+      <path
+         d="m 96.46315,166.49375 -2.1283,6.79688 -7.134943,0 5.794213,4.30312 -2.15642,6.80625 5.62545,-4.1625 5.63482,4.1625 -2.15642,-6.80625 5.79421,-4.30312 -7.13494,0 -2.13767,-6.79688 z m 3.5159,4.92188 11.41029,0 -9.25387,6.89062 3.48778,11.03437 -9.1601,-6.76874 -9.150734,6.76874 3.487774,-11.03437 -9.253859,-6.89062 11.410289,0 3.50653,-11.17501 3.5159,11.17501 z m -3.5159,-8.05313 -2.8221,8.99063 -9.272619,0 7.528729,5.59687 -2.822103,8.91562 7.388093,-5.45625 7.39746,5.45625 -2.8221,-8.91562 7.51935,-5.59687 -9.27261,0 -2.8221,-8.99063 z m 0,0 -2.8221,8.99063 -9.272619,0 7.528729,5.59687 -2.822103,8.91562 7.388093,-5.45625 7.39746,5.45625 -2.8221,-8.91562 7.51935,-5.59687 -9.27261,0 -2.8221,-8.99063 z"
+         style="fill:#cba382;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="5" />
+      <path
+         d="m 95.21617,160.86875 -2.8221,8.98125 -9.272613,0 7.528723,5.59688 -2.822098,8.91562 7.388088,-5.45625 7.38809,5.45625 -2.8221,-8.91562 7.52873,-5.59688 -9.27262,0 z"
+         style="fill:#f79646;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="6" />
+      <path
+         d="m 95.21617,160.86875 -2.8221,8.98125 -9.272613,0 7.528723,5.59688 -2.822098,8.91562 7.388088,-5.45625 7.38809,5.45625 -2.8221,-8.91562 7.52873,-5.59688 -9.27262,0 z"
+         style="fill:none;stroke:#f2f2f2;stroke-width:1.87514961px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="7" />
+      <path
+         d="m 326.43149,88.53125 9.35699,-14.1 1.57513,1.05 -9.37575,14.1 z m 1.9314,-10.59375 9.24449,-4.5375 -0.60005,10.275 c -0.0375,0.525 -0.46879,0.91875 -0.99383,0.88125 -0.50629,-0.0375 -0.90007,-0.46875 -0.88132,-0.99375 l 0.50629,-8.6625 1.35011,0.9 -7.80062,3.825 c -0.45004,0.225 -1.01258,0.0375 -1.25635,-0.43125 -0.22502,-0.46875 -0.0188,-1.03125 0.43128,-1.25625 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.15001196px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1;stroke-dasharray:none"
+         id="8" />
+      <path
+         d="m 80.02746,182.04688 -3.919063,14.70937 -1.809519,-0.4875 3.919063,-14.70938 z m 1.997034,9.00937 -7.303707,7.25625 -2.718967,-9.92812 c -0.140636,-0.49688 0.159388,-1.01251 0.656302,-1.14376 0.496915,-0.14062 1.012581,0.15 1.153217,0.64688 l 2.297058,8.38125 -1.565749,-0.42188 6.159866,-6.12187 c 0.365654,-0.36562 0.956326,-0.35625 1.32198,0.009 0.365654,0.36562 0.365654,0.95624 0,1.32187 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.15001196px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1;stroke-dasharray:none"
+         id="9" />
+      <text
+         style="font-size:13.80110073px;font-style:normal;font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="120.5"
+         x="338.37619"
+         xml:space="preserve"
+         id="10"><tspan
+           style="font-size:12;-inkscape-font-specification:Arial;font-family:Arial"
+           id="tspan3054">SUN</tspan></text>
+      <text
+         style="font-size:13.80110073px;font-style:normal;font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="120.5"
+         x="359.97791"
+         xml:space="preserve"
+         id="11"> </text>
+      <path
+         d="m 322.04364,100.625 -2.11892,6.7875 -7.14432,0 5.79421,4.3125 -2.15642,6.80625 5.62545,-4.1625 5.6442,4.1625 -2.15643,-6.80625 5.77547,-4.3125 -7.12557,0 -2.13767,-6.7875 z m 3.52528,4.9125 11.40091,0 -9.24449,6.9 3.48778,11.025 -9.16948,-6.76875 -9.15073,6.76875 3.48777,-11.025 -9.24448,-6.9 11.40091,0 3.50653,-11.175 3.52528,11.175 z m -3.52528,-8.04375 -2.81273,8.98125 -9.28199,0 7.5381,5.60625 -2.83147,8.90625 7.38809,-5.45625 7.40684,5.45625 -2.83148,-8.90625 7.51935,-5.60625 -9.26324,0 -2.83147,-8.98125 z m 0,0 -2.81273,8.98125 -9.28199,0 7.5381,5.60625 -2.83147,8.90625 7.38809,-5.45625 7.40684,5.45625 -2.83148,-8.90625 7.51935,-5.60625 -9.26324,0 -2.83147,-8.98125 z"
+         style="fill:#cba382;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="12" />
+      <path
+         d="m 320.80604,95 -2.83148,8.98125 -9.26324,0 7.51935,5.60625 -2.81272,8.90625 7.38809,-5.45625 7.38809,5.45625 -2.83148,-8.90625 7.5381,-5.60625 -9.28199,0 z"
+         style="fill:#f79646;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="13" />
+      <path
+         d="m 320.80604,95 -2.83148,8.98125 -9.26324,0 7.51935,5.60625 -2.81272,8.90625 7.38809,-5.45625 7.38809,5.45625 -2.83148,-8.90625 7.5381,-5.60625 -9.28199,0 z"
+         style="fill:none;stroke:#f2f2f2;stroke-width:1.87514961px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="14" />
+      <text
+         style="font-size:12.45099258px;font-style:italic;font-weight:bold;text-align:start;text-anchor:start;fill:#eeb500;font-family:Calibri"
+         y="64.949997"
+         x="292.52332"
+         xml:space="preserve"
+         id="15" />
+      <text
+         style="font-size:12.45099258px;font-style:italic;font-weight:bold;text-align:start;text-anchor:start;fill:#eeb500;font-family:Calibri"
+         y="48.949997"
+         x="345.72678"
+         xml:space="preserve"
+         id="16"> </text>
+      <path
+         d="m 86.027939,212.43125 c -2.465822,0 -4.472232,1.99687 -4.472232,4.4625 0,2.475 2.00641,4.47187 4.472232,4.47187 2.465821,0 4.472231,-1.99687 4.472231,-4.47187 0,-2.46563 -2.00641,-4.4625 -4.472231,-4.4625"
+         style="fill:#ff3b3b;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="17" />
+      <path
+         d="m 86.027939,212.43125 c -2.465822,0 -4.472232,1.99687 -4.472232,4.4625 0,2.475 2.00641,4.47187 4.472232,4.47187 2.465821,0 4.472231,-1.99687 4.472231,-4.47187 0,-2.46563 -2.00641,-4.4625 -4.472231,-4.4625"
+         style="fill:none;stroke:#f2f2f2;stroke-width:1.87514961px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
+         id="18" />
+      <path
+         d="m 362.11558,17.1875 c -2.45644,0 -4.46285,2.00625 -4.46285,4.4625 0,2.475 2.00641,4.4625 4.46285,4.4625 2.4752,0 4.46286,-1.9875 4.46286,-4.4625 0,-2.45625 -1.98766,-4.4625 -4.46286,-4.4625"
+         style="fill:#ff3b3b;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="19" />
+      <path
+         d="m 362.11558,17.1875 c -2.45644,0 -4.46285,2.00625 -4.46285,4.4625 0,2.475 2.00641,4.4625 4.46285,4.4625 2.4752,0 4.46286,-1.9875 4.46286,-4.4625 0,-2.45625 -1.98766,-4.4625 -4.46286,-4.4625"
+         style="fill:none;stroke:#f2f2f2;stroke-width:1.87514961px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
+         id="20" />
+      <path
+         d="m 242.41541,165.49062 c -2.46582,0 -4.47223,2.00625 -4.47223,4.47188 0,2.46562 2.00641,4.4625 4.47223,4.4625 2.46582,0 4.47223,-1.99688 4.47223,-4.4625 0,-2.46563 -2.00641,-4.47188 -4.47223,-4.47188"
+         style="fill:#00b050;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="21" />
+      <path
+         d="m 242.41541,165.49062 c -2.46582,0 -4.47223,2.00625 -4.47223,4.47188 0,2.46562 2.00641,4.4625 4.47223,4.4625 2.46582,0 4.47223,-1.99688 4.47223,-4.4625 0,-2.46563 -2.00641,-4.47188 -4.47223,-4.47188"
+         style="fill:none;stroke:#f2f2f2;stroke-width:1.87514961px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
+         id="22" />
+      <text
+         style="font-size:12.45099258px;font-style:normal;font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="90.599998"
+         x="132.31055"
+         xml:space="preserve"
+         id="24" />
+      <text
+         style="font-size:13.80110073px;font-style:normal;font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="74.599998"
+         x="173.51305"
+         xml:space="preserve"
+         id="25"> </text>
+      <text
+         style="font-size:12.45099258px;font-style:normal;font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="205.55"
+         x="288.42221"
+         xml:space="preserve"
+         id="28"> </text>
+      <text
+         style="font-size:13.80110073px;font-style:normal;font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="15.5"
+         x="406.03159"
+         xml:space="preserve"
+         id="31"> </text>
+      <text
+         style="font-size:13.80110073px;font-style:normal;font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="246.35001"
+         x="61.904144"
+         xml:space="preserve"
+         id="34"> </text>
+      <path
+         d="m 199.10883,82.7 c -7.47247,-9.234375 -34.20273,0.0094 -59.72351,20.63437 -25.51141,20.63438 -40.13758,44.84063 -32.67448,54.075 7.47247,9.23438 34.20273,-0.009 59.72351,-20.63437 25.51141,-20.63438 40.13758,-44.84062 32.67448,-54.075"
+         style="opacity:0.87999998;fill:#daeef3;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="35" />
+      <text
+         style="font-size:12.45099258px;font-style:italic;font-weight:bold;text-align:start;text-anchor:start;fill:#8db3e2;font-family:Calibri"
+         y="125.14999"
+         x="55.303612"
+         xml:space="preserve"
+         id="36"><tspan
+           style="font-size:10;-inkscape-font-specification:Arial;font-family:Arial"
+           id="tspan3056">Equatorial plane</tspan></text>
+      <text
+         style="font-size:12.45099258px;font-style:italic;font-weight:bold;text-align:start;text-anchor:start;fill:#8db3e2;font-family:Calibri"
+         y="125.14999"
+         x="140.21037"
+         xml:space="preserve"
+         id="37"> </text>
+      <path
+         d="m 201.41527,73.55 c -2.46583,0 -4.47224,2.00625 -4.47224,4.471875 0,2.465625 2.00641,4.471875 4.47224,4.471875 2.46582,0 4.46285,-2.00625 4.46285,-4.471875 0,-2.465625 -1.99703,-4.471875 -4.46285,-4.471875"
+         style="fill:#00b050;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="38" />
+      <path
+         d="m 201.41527,73.55 c -2.46583,0 -4.47224,2.00625 -4.47224,4.471875 0,2.465625 2.00641,4.471875 4.47224,4.471875 2.46582,0 4.46285,-2.00625 4.46285,-4.471875 0,-2.465625 -1.99703,-4.471875 -4.46285,-4.471875"
+         style="fill:none;stroke:#f2f2f2;stroke-width:1.87514961px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
+         id="39" />
+      <text
+         style="font-size:13.80110073px;font-style:normal;font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="126.8"
+         x="165.41238"
+         xml:space="preserve"
+         id="40"><tspan
+           style="-inkscape-font-specification:Arial;font-family:Arial;font-size:12"
+           id="tspan3052">Earth</tspan></text>
+      <text
+         style="font-size:13.80110073px;font-style:normal;font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="126.8"
+         x="199.01508"
+         xml:space="preserve"
+         id="41"> </text>
+      <path
+         sodipodi:type="arc"
+         style="opacity:0.87999998000000001;fill:url(#linearGradient5184);fill-opacity:1;stroke:url(#radialGradient3708)"
+         id="path2880"
+         sodipodi:cx="54.54591"
+         sodipodi:cy="42.259575"
+         sodipodi:rx="17.341185"
+         sodipodi:ry="17.341185"
+         d="m 71.887094,42.259575 c 0,9.577272 -7.763912,17.341185 -17.341184,17.341185 -9.577272,0 -17.341185,-7.763913 -17.341185,-17.341185 0,-9.577272 7.763913,-17.341185 17.341185,-17.341185 9.577272,0 17.341184,7.763913 17.341184,17.341185 z"
+         transform="translate(169.08489,80.403383)" />
+      <g
+         id="1-8"
+         transform="translate(297.90589,26.249133)">
+        <text
+           style="font-size:13.81438255px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+           y="13.080549"
+           x="0"
+           xml:space="preserve"
+           id="2-8"> </text>
+        <text
+           style="font-size:12.46297646px;font-style:italic;font-weight:bold;text-align:start;text-anchor:start;fill:#eeb500;font-family:Calibri"
+           y="16.538626"
+           x="52.254402"
+           xml:space="preserve"
+           id="5-5"> </text>
+        <g
+           id="1-8-8"
+           transform="translate(-1.8594014,0.09317872)">
+          <text
+             style="font-size:13.81438255px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+             y="13.080549"
+             x="0"
+             xml:space="preserve"
+             id="2-8-8"> </text>
+          <text
+             style="font-size:12.46297646px;font-style:italic;font-weight:bold;text-align:start;text-anchor:start;fill:#eeb500;font-family:Calibri"
+             y="16.538626"
+             x="52.254402"
+             xml:space="preserve"
+             id="5-5-2"> </text>
+          <text
+             style="font-size:12.46297646px;font-style:italic;font-weight:bold;text-align:start;text-anchor:start;fill:#eeb500;font-family:Calibri"
+             y="14.598729"
+             x="12.846712"
+             xml:space="preserve"
+             id="4-4"><tspan
+               style="font-size:10px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan4239">Ecliptic</tspan></text>
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         x="235.45903"
+         y="190.68677"
+         id="text4211"><tspan
+           sodipodi:role="line"
+           id="tspan4213"
+           x="235.45903"
+           y="190.68677"
+           style="font-size:11px;font-weight:bold;font-family:Arial;-inkscape-font-specification:Arial Bold">Spring </tspan><tspan
+           sodipodi:role="line"
+           x="235.45903"
+           y="204.43677"
+           style="font-size:11px;font-weight:bold;font-family:Arial;-inkscape-font-specification:Arial Bold"
+           id="tspan4215">equinox</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         x="213.12215"
+         y="241.38553"
+         id="text4217"
+         transform="translate(0,-17.510159)"><tspan
+           sodipodi:role="line"
+           id="tspan4219"
+           x="213.12215"
+           y="241.38553" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         x="159.71527"
+         y="52.793549"
+         id="text4221"><tspan
+           sodipodi:role="line"
+           id="tspan4223"
+           x="159.71527"
+           y="52.793549"
+           style="font-size:11px;font-weight:bold;font-family:Arial;-inkscape-font-specification:Arial Bold">Fall </tspan><tspan
+           sodipodi:role="line"
+           x="159.71527"
+           y="66.543549"
+           style="font-size:11px;font-weight:bold;font-family:Arial;-inkscape-font-specification:Arial Bold"
+           id="tspan4225">equinox</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         x="372.71179"
+         y="8.7722216"
+         id="text4227"><tspan
+           sodipodi:role="line"
+           id="tspan4229"
+           x="372.71179"
+           y="8.7722216"
+           style="font-size:11px;font-weight:bold;font-family:Arial;-inkscape-font-specification:Arial Bold">Summer </tspan><tspan
+           sodipodi:role="line"
+           x="372.71179"
+           y="22.522221"
+           style="font-size:11px;font-weight:bold;font-family:Arial;-inkscape-font-specification:Arial Bold"
+           id="tspan4231">solstice </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         x="41.582264"
+         y="224.88425"
+         id="text4233"><tspan
+           sodipodi:role="line"
+           id="tspan4235"
+           x="41.582264"
+           y="224.88425"
+           style="font-size:11px;font-weight:bold;font-family:Arial;-inkscape-font-specification:Arial Bold">Winter </tspan><tspan
+           sodipodi:role="line"
+           x="41.582264"
+           y="238.63425"
+           style="font-size:11px;font-weight:bold;font-family:Arial;-inkscape-font-specification:Arial Bold"
+           id="tspan4237">solstice</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         x="236.61388"
+         y="221.48993"
+         id="text2893"><tspan
+           sodipodi:role="line"
+           x="236.61388"
+           y="221.48993"
+           id="tspan2897"
+           style="font-size:10px;font-style:italic;font-weight:bold;fill:#008000;font-family:Arial;-inkscape-font-specification:Arial Bold Italic">first  point of Aries</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         x="159.73447"
+         y="34.097301"
+         id="text2893-1"><tspan
+           sodipodi:role="line"
+           x="159.73447"
+           y="34.097301"
+           id="tspan2897-7"
+           style="font-size:10px;font-style:italic;font-weight:bold;fill:#008000;font-family:Arial;-inkscape-font-specification:Arial Bold Italic">first  point of Libra</tspan></text>
+    </g>
+  </g>
+</svg>
