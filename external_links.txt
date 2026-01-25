@@ -39,7 +39,7 @@ Total missing links: 28
   https://www.emirates.com/media-centre/emirates-to-receive-final-a380-in-november/
   Context: Fig. 5.1. The Airbus 380
 
-[Fig. 5.1]
+[Fig. 5.1 (alt)]
   https://www.facebook.com/photo/?fbid=10152531480905695&set=p.10152531480905695
   Context: Fig. 5.1. The Airbus 380 (alt)
 
@@ -47,7 +47,7 @@ Total missing links: 28
   https://medium.com/@pslcricketmaza/where-to-place-wi-fi-router-for-best-internet-speed-9d784e5e3377
   Context: Fig. 6.1. The wireless - wifi router image
 
-[Fig. 6.1]
+[Fig. 6.1 (alt)]
   https://www.theguardian.com/culture/2009/may/06/radio-head-zoe-williams
   Context: Fig. 6.1. The wireless - guardian image
 
@@ -55,9 +55,21 @@ Total missing links: 28
   https://web.archive.org/web/20160112123725/http://grin.hq.nasa.gov/ABSTRACTS/GPN-2000-001138.html
   Context: Fig. 8.2. NASA Blue Marble reference
 
-[Fig. 8.2]
+[Fig. 8.2 (alt)]
   https://www.nasa.gov/multimedia/imagegallery/image_feature_329.html
   Context: Fig. 8.2. NASA image reference
+
+[Fig. 9.9 (alt)]
+  https://www.bbc.co.uk/news/uk-england-leicestershire-68246524
+  Context: Fig. 9.9b. Sand casting - BBC news
+
+[Fig. 9.11a]
+  https://www.shutterstock.com/image-vector/line-historic-log-heater-hearth-object-1496593727
+  Context: Fig. 9.11a. Furnace illustration - Shutterstock
+
+[Fig. 9.18a]
+  https://www.pharmaceutical-technology.com/sponsored/single-use-plastics-pharma/
+  Context: Fig. 9.18a. Fast-moving river
 
 [Fig. 10.4]
   https://youtu.be/pdMZjssrAlk
@@ -67,7 +79,7 @@ Total missing links: 28
   https://collection.sciencemuseumgroup.org.uk/objects/co526895/progress-toy-gyroscope-1950-1960
   Context: Fig. 10.14. A gyroscope on a cone
 
-[Fig. 10.14]
+[Fig. 10.14 (alt)]
   https://www.worthpoint.com/worthopedia/antique-double-circle-gyroscope-made-1900629947
   Context: Fig. 10.14. Gyroscope (alt source)
 
@@ -93,29 +105,17 @@ Total missing links: 28
 
 [Fig. 13.1]
   https://admiralcloudberg.medium.com/neither-money-nor-manpower-the-story-of-the-de-havilland-comet-and-the-crash-of-boac-flight-781-36db2a3435ce
-  Context: Fig. 13.1. Well-known engineering failures. (a) The Tacoma Narrows Bridge and (b) the De Havilland Comet
+  Context: Fig. 13.1. Well-known engineering failures - de Havilland Comet
 
 [Fig. 13.7]
   https://upload.wikimedia.org/wikipedia/commons/6/6f/RogersCommission-v1p57.jpg
   Context: Fig. 13.7. The Challenger disaster - Rogers Commission
 
-[Fig. 13.7]
+[Fig. 13.7 (alt)]
   https://www.flickr.com/photos/nasa2explore/10697912315/in/album-72157630719371642/
   Context: Fig. 13.7. The Challenger disaster - NASA flickr
 
 [Fig. 13.10]
   https://en.arco-vienna.at/archers-paradox.html
-  Context: Fig. 13.10 An arrow when released is subject to a high axial force
-
-[UNKNOWN]
-  https://www.bbc.co.uk/news/uk-england-leicestershire-68246524
-  Context: UNKNOWN - BBC news
-
-[UNKNOWN]
-  https://www.pharmaceutical-technology.com/sponsored/single-use-plastics-pharma/
-  Context: UNKNOWN - pharmaceutical technology
-
-[UNKNOWN]
-  https://www.shutterstock.com/image-vector/line-historic-log-heater-hearth-object-1496593727
-  Context: UNKNOWN - shutterstock furnace
+  Context: Fig. 13.10 An arrow - archer's paradox
 
