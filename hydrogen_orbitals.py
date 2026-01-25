@@ -35,15 +35,6 @@ BESSEL_ZEROS = {
 def membrane_mode(r, theta, n, k):
     """
     Calculate the displacement of a circular membrane for mode (n, k).
-
-    Using the image's notation:
-    - n = radial mode number (which zero of Bessel function, n=1,2,3...)
-    - k = angular mode number (number of nodal diameters, k=0,1,2...)
-
-    The displacement is:
-    z(r, θ) = J_k(j_{k,n} * r/a) * cos(k * θ)
-
-    where j_{k,n} is the n-th zero of J_k, and a=1 (unit radius).
     """
     m = k  # Bessel order = number of nodal diameters
     j_mn = BESSEL_ZEROS[m][n - 1]  # n-th zero of J_m
@@ -57,70 +48,116 @@ def membrane_mode(r, theta, n, k):
     return R * Theta
 
 
-def create_membrane_surface(n, k, num_r=60, num_theta=120):
+def get_normalization(n, k):
+    """Get normalization factor for a mode."""
+    r_test = np.linspace(0.001, 1, 100)
+    theta_test = np.linspace(0, 2 * np.pi, 100)
+    R, T = np.meshgrid(r_test, theta_test)
+    Z_test = membrane_mode(R, T, n, k)
+    return np.max(np.abs(Z_test))
+
+
+def create_membrane_surface(n, k, num_r=80, num_theta=160):
     """
     Generate the 3D surface mesh for a membrane vibration mode.
-
-    Parameters:
-    - n: radial mode number (1, 2, 3, ...)
-    - k: angular mode number / nodal diameters (0, 1, 2, ...)
-    - num_r: number of radial points
-    - num_theta: number of angular points
-
-    Returns X, Y, Z arrays for the surface.
     """
-    # Create polar coordinate grid
     r = np.linspace(0, 1, num_r)
     theta = np.linspace(0, 2 * np.pi, num_theta)
     R, Theta = np.meshgrid(r, theta)
 
-    # Calculate displacement
     Z = membrane_mode(R, Theta, n, k)
+    norm = get_normalization(n, k)
+    Z = Z / norm * 0.35
 
-    # Normalize and scale for good visualization
-    Z = Z / np.max(np.abs(Z)) * 0.35
-
-    # Convert to Cartesian
     X = R * np.cos(Theta)
     Y = R * np.sin(Theta)
 
     return X, Y, Z
 
 
-def create_single_mode_figure(n, k, show_wireframe=True):
+def add_polar_grid(fig, n, k, num_circles=15, num_spokes=24, row=None, col=None):
     """
-    Create a Plotly figure for a single membrane mode.
+    Add polar grid lines (concentric circles and radial spokes) to the surface.
+    """
+    norm = get_normalization(n, k)
+    line_color = 'rgb(0, 0, 0)'
+    line_width = 2.5
+    # Small offset to lift lines above surface
+    z_offset = 0.005
+
+    # Concentric circles (constant r)
+    for r_val in np.linspace(0.08, 1.0, num_circles):
+        theta_pts = np.linspace(0, 2 * np.pi, 200)
+        z_pts = membrane_mode(r_val, theta_pts, n, k) / norm * 0.35 + z_offset
+
+        x_pts = r_val * np.cos(theta_pts)
+        y_pts = r_val * np.sin(theta_pts)
+
+        trace = go.Scatter3d(
+            x=x_pts, y=y_pts, z=z_pts,
+            mode='lines',
+            line=dict(color=line_color, width=line_width),
+            showlegend=False,
+            hoverinfo='skip'
+        )
+        if row is not None and col is not None:
+            fig.add_trace(trace, row=row, col=col)
+        else:
+            fig.add_trace(trace)
+
+    # Radial spokes (constant theta)
+    for theta_val in np.linspace(0, 2 * np.pi, num_spokes, endpoint=False):
+        r_pts = np.linspace(0, 1, 100)
+        z_pts = membrane_mode(r_pts, theta_val, n, k) / norm * 0.35 + z_offset
+
+        x_pts = r_pts * np.cos(theta_val)
+        y_pts = r_pts * np.sin(theta_val)
+
+        trace = go.Scatter3d(
+            x=x_pts, y=y_pts, z=z_pts,
+            mode='lines',
+            line=dict(color=line_color, width=line_width),
+            showlegend=False,
+            hoverinfo='skip'
+        )
+        if row is not None and col is not None:
+            fig.add_trace(trace, row=row, col=col)
+        else:
+            fig.add_trace(trace)
+
+
+def create_single_mode_figure(n, k):
+    """
+    Create a Plotly figure for a single membrane mode with polar grid lines.
     """
     X, Y, Z = create_membrane_surface(n, k)
 
     fig = go.Figure()
 
-    # Surface with grayscale shading based on height
+    # Surface with grayscale shading
     fig.add_trace(go.Surface(
         x=X, y=Y, z=Z,
-        surfacecolor=Z,  # Color by height
+        surfacecolor=Z,
         colorscale=[
-            [0.0, 'rgb(40, 40, 40)'],      # Dark gray for low points
-            [0.25, 'rgb(100, 100, 100)'],
-            [0.5, 'rgb(180, 180, 180)'],   # Mid gray
-            [0.75, 'rgb(220, 220, 220)'],
-            [1.0, 'rgb(255, 255, 255)']    # White for high points
+            [0.0, 'rgb(80, 80, 80)'],
+            [0.3, 'rgb(140, 140, 140)'],
+            [0.5, 'rgb(190, 190, 190)'],
+            [0.7, 'rgb(220, 220, 220)'],
+            [1.0, 'rgb(255, 255, 255)']
         ],
         showscale=False,
         lighting=dict(
-            ambient=0.7,
-            diffuse=0.4,
-            specular=0.1,
-            roughness=0.9
+            ambient=0.6,
+            diffuse=0.5,
+            specular=0.15,
+            roughness=0.8
         ),
-        lightposition=dict(x=0, y=0, z=100)
+        lightposition=dict(x=50, y=50, z=100)
     ))
 
-    if show_wireframe:
-        # Add wireframe grid lines
-        add_wireframe(fig, n, k)
+    # Add polar grid lines
+    add_polar_grid(fig, n, k, num_circles=15, num_spokes=24)
 
-    # Layout
     fig.update_layout(
         scene=dict(
             xaxis=dict(visible=False, showbackground=False),
@@ -147,77 +184,15 @@ def create_single_mode_figure(n, k, show_wireframe=True):
     return fig
 
 
-def add_wireframe(fig, n, k, num_r_lines=10, num_theta_lines=24, row=None, col=None):
-    """
-    Add wireframe grid lines to the figure.
-    """
-    # Concentric circles (constant r)
-    for r_val in np.linspace(0.1, 1.0, num_r_lines):
-        theta_pts = np.linspace(0, 2 * np.pi, 100)
-        r_pts = np.full_like(theta_pts, r_val)
-        z_pts = membrane_mode(r_pts, theta_pts, n, k)
-        z_pts = z_pts / np.max(np.abs(membrane_mode(
-            np.linspace(0.01, 1, 50)[:, np.newaxis],
-            np.linspace(0, 2*np.pi, 50)[np.newaxis, :],
-            n, k
-        ))) * 0.35
-
-        x_pts = r_val * np.cos(theta_pts)
-        y_pts = r_val * np.sin(theta_pts)
-
-        trace = go.Scatter3d(
-            x=x_pts, y=y_pts, z=z_pts,
-            mode='lines',
-            line=dict(color='rgba(30, 30, 30, 0.6)', width=1.5),
-            showlegend=False,
-            hoverinfo='skip'
-        )
-        if row is not None and col is not None:
-            fig.add_trace(trace, row=row, col=col)
-        else:
-            fig.add_trace(trace)
-
-    # Radial lines (constant theta)
-    for theta_val in np.linspace(0, 2 * np.pi, num_theta_lines, endpoint=False):
-        r_pts = np.linspace(0, 1, 50)
-        theta_pts = np.full_like(r_pts, theta_val)
-        z_pts = membrane_mode(r_pts, theta_pts, n, k)
-        z_pts = z_pts / np.max(np.abs(membrane_mode(
-            np.linspace(0.01, 1, 50)[:, np.newaxis],
-            np.linspace(0, 2*np.pi, 50)[np.newaxis, :],
-            n, k
-        ))) * 0.35
-
-        x_pts = r_pts * np.cos(theta_val)
-        y_pts = r_pts * np.sin(theta_val)
-
-        trace = go.Scatter3d(
-            x=x_pts, y=y_pts, z=z_pts,
-            mode='lines',
-            line=dict(color='rgba(30, 30, 30, 0.6)', width=1.5),
-            showlegend=False,
-            hoverinfo='skip'
-        )
-        if row is not None and col is not None:
-            fig.add_trace(trace, row=row, col=col)
-        else:
-            fig.add_trace(trace)
-
-
 def create_2x2_figure():
     """
-    Create a 2x2 grid of the four modes from the original image:
-    - (n=1, k=0): fundamental mode, simple dome
-    - (n=2, k=0): second radial mode, one nodal circle
-    - (n=1, k=1): first angular mode, one nodal diameter
-    - (n=2, k=1): combined mode, one nodal diameter + one nodal circle
+    Create a 2x2 grid of the four modes from the original image.
     """
-    # The four modes to display
     modes = [
-        (1, 0, "n=1, k=0"),   # Top-left
-        (2, 0, "n=2, k=0"),   # Top-right
-        (1, 1, "n=1, k=1"),   # Bottom-left
-        (2, 1, "n=2, k=1"),   # Bottom-right
+        (1, 0, "n=1, k=0"),
+        (2, 0, "n=2, k=0"),
+        (1, 1, "n=1, k=1"),
+        (2, 1, "n=2, k=1"),
     ]
 
     fig = make_subplots(
@@ -241,28 +216,27 @@ def create_2x2_figure():
                 x=X, y=Y, z=Z,
                 surfacecolor=Z,
                 colorscale=[
-                    [0.0, 'rgb(40, 40, 40)'],
-                    [0.25, 'rgb(100, 100, 100)'],
-                    [0.5, 'rgb(180, 180, 180)'],
-                    [0.75, 'rgb(220, 220, 220)'],
+                    [0.0, 'rgb(80, 80, 80)'],
+                    [0.3, 'rgb(140, 140, 140)'],
+                    [0.5, 'rgb(190, 190, 190)'],
+                    [0.7, 'rgb(220, 220, 220)'],
                     [1.0, 'rgb(255, 255, 255)']
                 ],
                 showscale=False,
                 lighting=dict(
-                    ambient=0.7,
-                    diffuse=0.4,
-                    specular=0.1,
-                    roughness=0.9
+                    ambient=0.6,
+                    diffuse=0.5,
+                    specular=0.15,
+                    roughness=0.8
                 ),
-                lightposition=dict(x=0, y=0, z=100)
+                lightposition=dict(x=50, y=50, z=100)
             ),
             row=row, col=col
         )
 
-        # Add wireframe
-        add_wireframe(fig, n, k, num_r_lines=8, num_theta_lines=20, row=row, col=col)
+        # Add polar grid lines (15 circles, 24 spokes)
+        add_polar_grid(fig, n, k, num_circles=15, num_spokes=24, row=row, col=col)
 
-    # Common scene settings
     scene_settings = dict(
         xaxis=dict(visible=False, showbackground=False),
         yaxis=dict(visible=False, showbackground=False),
@@ -296,18 +270,11 @@ def create_2x2_figure():
 
 if __name__ == "__main__":
     print("Generating circular membrane vibration modes...")
-    print()
-    print("Mode notation (n, k):")
-    print("  n = radial mode number (which zero of Bessel function)")
-    print("  k = number of nodal diameters (Bessel function order)")
-    print()
 
-    # Create combined 2x2 figure
     fig = create_2x2_figure()
     fig.write_html("hydrogen_orbitals_combined.html")
     print("Saved: hydrogen_orbitals_combined.html")
 
-    # Create individual figures
     modes = [(1, 0), (2, 0), (1, 1), (2, 1)]
     for n, k in modes:
         fig = create_single_mode_figure(n, k)
@@ -315,9 +282,6 @@ if __name__ == "__main__":
         fig.write_html(filename)
         print(f"Saved: {filename}")
 
-    print()
-    print("Done! Open the HTML files in a browser.")
-
-    # Show the combined figure
+    print("\nDone! Open the HTML files in a browser.")
     fig = create_2x2_figure()
     fig.show()
