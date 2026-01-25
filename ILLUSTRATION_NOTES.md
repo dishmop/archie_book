@@ -34,6 +34,16 @@ The following references from the end of Chapter 3 may be the original source fo
 
 ## Chapter 5 - Flow Diagrams with Unknown Origin
 
+### Possible Reference Source
+
+The following reference from the end of Chapter 5 may be the original source for some illustrations:
+
+1. **How do Wings Work?**, Holger Babinsky, IoP Physics Education 38 (6), 297, 2003
+
+**Action:** Check if any of the Chapter 5 flow diagrams originate from this paper. If so, may need permission from IoP or Babinsky.
+
+### Unknown Origin Figures
+
 Several flow diagrams in Chapter 5 have unknown origins from "the original manuscript". These are currently marked as **Red** status.
 
 ### Figures Needing Replacement
@@ -127,6 +137,29 @@ The following images appear to be low resolution, blurry, or have other quality 
 | fig_10_11.png | 545x436 | Borderline - Gyrocompass diagram |
 | fig_10_12a.png | 503x388 | Low res - Earth oblate spheroid |
 | fig_13_06.png | 230x525 | Small but acceptable (line drawing) |
+
+---
+
+## Recently Replaced Figures (Pending Hugh's Review)
+
+The following figures have been replaced with self-created Python versions. These need Hugh's review to confirm they are acceptable replacements.
+
+### Chapter 4
+
+| Figure | Description | Python Script | Notes |
+|--------|-------------|---------------|-------|
+| fig_04_09.png | Two-source wave interference pattern | `wave_interference.py` | Grayscale interference pattern from two coherent point sources |
+| fig_04_12.png | 3D Gaussian surface ("Mexican Hat") | `gaussian_3d_surface.py` | Rainbow-colored 3D surface with discrete color bands |
+| fig_04_13.png | Rayleigh distribution (Probability vs Radius) | `fig_04_13_rayleigh.py` | P(r) ∝ r × exp(-2r²/σ²) curve |
+| fig_04_14.png | Brewster angle / refraction diagram | `fig_04_14_brewster.py` | Shows incident, reflected, and refracted rays with polarization arrows |
+
+### Chapter 5
+
+| Figure | Description | Python Script | Notes |
+|--------|-------------|---------------|-------|
+| fig_05_04.png | Potential flow round inclined flat plate | `fig_05_04_flat_plate.py` | Rainbow streamlines using elliptic coordinates |
+
+All Python scripts are located in `/python_flow_figures/` directory.
 
 ---
 
