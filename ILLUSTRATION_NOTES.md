@@ -4,45 +4,7 @@ Notes on specific figures that need attention or have additional context.
 
 ---
 
-## Chapter 2 - Submarine Cables
-
-### Possible Reference Sources
-
-The following references from the end of Chapter 2 may be the original source for some illustrations:
-
-1. **The Atlantic Cable**, Bern Dibner, Burndy Library Norwalk Conn. 1959
-2. **The Theory of the Submarine Telegraph and Telephone Cable**, H.W. Malcolm, Benn Brothers, London, 1917
-
-The 1917 book (Malcolm) is likely out of copyright and could be a valid source for historical diagrams.
-
-**Action:** Check if any of the Chapter 2 figures (particularly Fig. 2.1, 2.2) originate from these references.
-
----
-
-## Chapter 3 - Tides
-
-### Possible Reference Sources
-
-The following references from the end of Chapter 3 may be the original source for some illustrations:
-
-1. **Erta Pater: an introduction to the Physics of the Earth**, F.D. Stacey and Paul M. Davis, Cambridge University Press
-2. **Tides: A Scientific History**, D.E. Cartwright, Cambridge University Press
-
-**Action:** Check if any of the Chapter 3 figures originate from these references.
-
----
-
 ## Chapter 5 - Flow Diagrams with Unknown Origin
-
-### Possible Reference Source
-
-The following reference from the end of Chapter 5 may be the original source for some illustrations:
-
-1. **How do Wings Work?**, Holger Babinsky, IoP Physics Education 38 (6), 297, 2003
-
-**Action:** Check if any of the Chapter 5 flow diagrams originate from this paper. If so, may need permission from IoP or Babinsky.
-
-### Unknown Origin Figures
 
 Several flow diagrams in Chapter 5 have unknown origins from "the original manuscript". These are currently marked as **Red** status.
 
@@ -93,20 +55,7 @@ Attempts have been made to recreate these flow diagrams using Python (see `pytho
 
 ---
 
-## Chapter 9 - Not the Bernoulli Effect
-
-### Possible Reference Sources
-
-The following references from the end of Chapter 9 may be the original source for some illustrations:
-
-1. **Fluid Dynamics for Physicists**, T.E. Faber, Cambridge University Press, 1995
-2. **Bernoulli Levitation**, C Waltham, S Bendall and Andrej Kotliicki, Am. J. Phys. 71 (2003) 176-179
-3. **Beating the Teapot Effect**, C. Duez, C. Ybert, C. Clanet, L. Bocquet, Phys. Rev. Lett. vol 104, 084503 (2010), arXiv:0910.3306
-4. **How do Wings Work?**, H. Babinsky, Phys. Ed., PII: S0031-9120(03)68660-0 (2003)
-
-**Note:** Reference 3 (arXiv:0910.3306) is the source of the teapot image in Fig. 9.7d.
-
-### Flow Diagrams with Unknown Origin
+## Chapter 9 - Flow Diagrams with Unknown Origin
 
 | Figure | Description | Status |
 |--------|-------------|--------|
