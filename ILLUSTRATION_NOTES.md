@@ -93,7 +93,20 @@ Attempts have been made to recreate these flow diagrams using Python (see `pytho
 
 ---
 
-## Chapter 9 - Flow Diagrams
+## Chapter 9 - Not the Bernoulli Effect
+
+### Possible Reference Sources
+
+The following references from the end of Chapter 9 may be the original source for some illustrations:
+
+1. **Fluid Dynamics for Physicists**, T.E. Faber, Cambridge University Press, 1995
+2. **Bernoulli Levitation**, C Waltham, S Bendall and Andrej Kotliicki, Am. J. Phys. 71 (2003) 176-179
+3. **Beating the Teapot Effect**, C. Duez, C. Ybert, C. Clanet, L. Bocquet, Phys. Rev. Lett. vol 104, 084503 (2010), arXiv:0910.3306
+4. **How do Wings Work?**, H. Babinsky, Phys. Ed., PII: S0031-9120(03)68660-0 (2003)
+
+**Note:** Reference 3 (arXiv:0910.3306) is the source of the teapot image in Fig. 9.7d.
+
+### Flow Diagrams with Unknown Origin
 
 | Figure | Description | Status |
 |--------|-------------|--------|
