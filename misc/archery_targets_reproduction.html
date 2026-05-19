@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archery Targets Reproduction</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #fff;
+    }
+
+    .wrap {
+      width: 875px;
+      height: 492px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    svg {
+      display: block;
+      width: 875px;
+      height: 492px;
+      background: #fff;
+    }
+
+    .target-blue { fill: #4f83c3; }
+    .target-red { fill: #ff0b12; }
+    .target-yellow { fill: #fff000; }
+
+    .drop-line {
+      stroke: #4f83c3;
+      stroke-width: 3;
+      stroke-dasharray: 8 6;
+      fill: none;
+    }
+
+    .coin-main { fill: #9a642f; }
+    .coin-dark { fill: #5c3518; opacity: 0.5; }
+    .coin-light { fill: #c38445; opacity: 0.65; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <svg viewBox="0 0 875 492" aria-label="Six targets with arrows beneath them">
+      <defs>
+        <g id="target">
+          <circle class="target-blue" cx="0" cy="0" r="41" />
+          <circle class="target-red" cx="0" cy="0" r="28" />
+          <circle class="target-yellow" cx="0" cy="0" r="15" />
+        </g>
+
+        <g id="coin">
+          <circle class="coin-main" cx="0" cy="0" r="12" />
+          <ellipse class="coin-light" cx="-2" cy="-3" rx="7" ry="6" />
+          <path class="coin-dark" d="M-10,2 C-4,8 5,8 10,2 C6,14 -8,14 -10,2Z" />
+          <path class="coin-dark" d="M-8,-1 C-2,2 5,2 10,-1" stroke="#4a2812" stroke-width="2" fill="none" opacity="0.45" />
+        </g>
+      </defs>
+
+      <!-- Targets -->
+      <use href="#target" x="61" y="62" />
+      <use href="#target" x="215" y="62" />
+      <use href="#target" x="369" y="62" />
+      <use href="#target" x="522" y="62" />
+      <use href="#target" x="677" y="62" />
+      <use href="#target" x="831" y="62" />
+
+      <!-- Blue dashed verticals -->
+      <path class="drop-line" d="M61 102 L61 314" />
+      <path class="drop-line" d="M215 102 L215 314" />
+      <path class="drop-line" d="M369 102 L369 314" />
+      <path class="drop-line" d="M522 102 L522 314" />
+      <path class="drop-line" d="M677 102 L677 314" />
+      <path class="drop-line" d="M831 102 L831 314" />
+
+      <!-- Coins -->
+      <use href="#coin" x="61" y="323" />
+      <use href="#coin" x="215" y="323" />
+      <use href="#coin" x="369" y="323" />
+      <use href="#coin" x="522" y="323" />
+      <use href="#coin" x="677" y="323" />
+      <use href="#coin" x="831" y="323" />
+    </svg>
+  </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coupled Pendulums with Spring</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .figure {
+      width: 960px;
+      max-width: 96vw;
+      aspect-ratio: 960 / 596;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .thin { stroke: #111; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .med { stroke: #111; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .heavy { stroke: #111; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .guide { stroke: #111; stroke-width: 2; fill: none; stroke-linecap: round; }
+    .mass { fill: #111; }
+    .label { font-size: 42px; font-style: italic; fill: #111; }
+    .small-label { font-size: 40px; font-style: italic; fill: #111; }
+  </style>
+</head>
+<body>
+  <div class="figure">
+    <svg viewBox="0 0 960 596" aria-label="Two pendulums of length l with masses m coupled by a spring k, angles theta one and theta two, horizontal displacements eta one and eta two, and separation d.">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#111" />
+        </marker>
+        <marker id="arrowStart" markerWidth="10" markerHeight="10" refX="2" refY="5" orient="auto" markerUnits="strokeWidth">
+          <path d="M 10 0 L 0 5 L 10 10 z" fill="#111" />
+        </marker>
+      </defs>
+
+      <!-- ceiling -->
+      <path class="heavy" d="M54 65 H820" />
+      <g class="thin">
+        <line x1="58" y1="60" x2="49" y2="38" />
+        <line x1="70" y1="63" x2="60" y2="37" />
+        <line x1="83" y1="63" x2="72" y2="37" />
+        <line x1="96" y1="63" x2="84" y2="37" />
+        <line x1="109" y1="63" x2="97" y2="37" />
+        <line x1="122" y1="63" x2="110" y2="37" />
+        <line x1="135" y1="63" x2="123" y2="37" />
+        <line x1="148" y1="63" x2="136" y2="37" />
+        <line x1="161" y1="63" x2="149" y2="37" />
+        <line x1="174" y1="63" x2="162" y2="37" />
+        <line x1="187" y1="63" x2="175" y2="37" />
+        <line x1="200" y1="63" x2="188" y2="37" />
+        <line x1="213" y1="63" x2="201" y2="37" />
+        <line x1="226" y1="63" x2="214" y2="37" />
+        <line x1="239" y1="63" x2="227" y2="37" />
+        <line x1="252" y1="63" x2="240" y2="37" />
+        <line x1="265" y1="63" x2="253" y2="37" />
+        <line x1="278" y1="63" x2="266" y2="37" />
+        <line x1="291" y1="63" x2="279" y2="37" />
+        <line x1="304" y1="63" x2="292" y2="37" />
+        <line x1="317" y1="63" x2="305" y2="37" />
+        <line x1="330" y1="63" x2="318" y2="37" />
+        <line x1="343" y1="63" x2="331" y2="37" />
+        <line x1="356" y1="63" x2="344" y2="37" />
+        <line x1="369" y1="63" x2="357" y2="37" />
+        <line x1="382" y1="63" x2="370" y2="37" />
+        <line x1="395" y1="63" x2="383" y2="37" />
+        <line x1="408" y1="63" x2="396" y2="37" />
+        <line x1="421" y1="63" x2="409" y2="37" />
+        <line x1="434" y1="63" x2="422" y2="37" />
+        <line x1="447" y1="63" x2="435" y2="37" />
+        <line x1="460" y1="63" x2="448" y2="37" />
+        <line x1="473" y1="63" x2="461" y2="37" />
+        <line x1="486" y1="63" x2="474" y2="37" />
+        <line x1="499" y1="63" x2="487" y2="37" />
+        <line x1="512" y1="63" x2="500" y2="37" />
+        <line x1="525" y1="63" x2="513" y2="37" />
+        <line x1="538" y1="63" x2="526" y2="37" />
+        <line x1="551" y1="63" x2="539" y2="37" />
+        <line x1="564" y1="63" x2="552" y2="37" />
+        <line x1="577" y1="63" x2="565" y2="37" />
+        <line x1="590" y1="63" x2="578" y2="37" />
+        <line x1="603" y1="63" x2="591" y2="37" />
+        <line x1="616" y1="63" x2="604" y2="37" />
+        <line x1="629" y1="63" x2="617" y2="37" />
+        <line x1="642" y1="63" x2="630" y2="37" />
+        <line x1="655" y1="63" x2="643" y2="37" />
+        <line x1="668" y1="63" x2="656" y2="37" />
+        <line x1="681" y1="63" x2="669" y2="37" />
+        <line x1="694" y1="63" x2="682" y2="37" />
+        <line x1="707" y1="63" x2="695" y2="37" />
+        <line x1="720" y1="63" x2="708" y2="37" />
+        <line x1="733" y1="63" x2="721" y2="37" />
+        <line x1="746" y1="63" x2="734" y2="37" />
+        <line x1="759" y1="63" x2="747" y2="37" />
+        <line x1="772" y1="63" x2="760" y2="37" />
+        <line x1="785" y1="63" x2="773" y2="37" />
+        <line x1="798" y1="63" x2="786" y2="37" />
+        <line x1="811" y1="63" x2="799" y2="37" />
+      </g>
+
+      <!-- vertical reference lines -->
+      <line class="guide" x1="166" y1="67" x2="166" y2="544" />
+      <line class="guide" x1="676" y1="67" x2="676" y2="544" />
+
+      <!-- pendulum rods -->
+      <line class="med" x1="166" y1="67" x2="286" y2="385" />
+      <line class="med" x1="676" y1="67" x2="787" y2="386" />
+
+      <!-- masses -->
+      <circle class="mass" cx="286" cy="385" r="11" />
+      <circle class="mass" cx="787" cy="386" r="11" />
+
+      <!-- spring -->
+      <path class="heavy" d="M297 386 L308 386 L317 371 L333 401 L349 371 L365 401 L381 371 L397 401 L413 371 L429 401 L445 371 L461 401 L477 371 L493 401 L509 371 L525 401 L541 371 L557 401 L573 371 L589 401 L605 371 L621 401 L637 371 L653 401 L669 371 L685 401 L701 371 L717 401 L733 371 L749 401 L765 371 L776 386" />
+
+      <!-- angle marks and arrows -->
+      <path class="thin" d="M166 232 A165 165 0 0 0 224 221" marker-end="url(#arrow)" />
+      <path class="thin" d="M676 232 A165 165 0 0 0 730 223" marker-end="url(#arrow)" />
+          <!-- eta vertical projection ticks -->
+      <line class="guide" x1="286" y1="385" x2="286" y2="537" />
+      <line class="guide" x1="787" y1="386" x2="787" y2="537" />
+
+      <!-- eta arrows -->
+      <line class="thin" x1="166" y1="515" x2="286" y2="515" marker-end="url(#arrow)" />
+      <line class="thin" x1="676" y1="515" x2="787" y2="515" marker-end="url(#arrow)" />
+
+      <!-- d dimension line -->
+      <line class="thin" x1="287" y1="458" x2="786" y2="458" marker-start="url(#arrowStart)" marker-end="url(#arrow)" />
+    </svg>
+  </div>
+</body>
+</html>

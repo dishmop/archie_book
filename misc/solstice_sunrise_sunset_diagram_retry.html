@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sunrise & Sunset times around the Winter Solstice</title>
+<style>
+  html, body {
+    margin: 0;
+    min-height: 100%;
+    background: #eef2f5;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .diagram {
+    position: relative;
+    width: 1125px;
+    height: 845px;
+    background: #fff;
+    border: 2px solid #cfd9df;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  }
+
+  .title1 {
+    position: absolute;
+    left: 42px;
+    top: 26px;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 8px;
+  }
+
+  .title2 {
+    position: absolute;
+    left: 43px;
+    top: 78px;
+    font-size: 54px;
+    font-weight: 300;
+    letter-spacing: 16px;
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1125px;
+    height: 845px;
+  }
+
+  .axis-left {
+    position: absolute;
+    left: 17px;
+    top: 392px;
+    font-size: 31px;
+    line-height: 1.95;
+    font-weight: 900;
+  }
+
+  .axis-right {
+    position: absolute;
+    right: 31px;
+    top: 33px;
+    font-size: 31px;
+    line-height: 2.2;
+    font-weight: 900;
+  }
+
+  .label-big {
+    position: absolute;
+    color: rgba(75,78,84,.62);
+    font-size: 62px;
+    letter-spacing: 8px;
+    white-space: nowrap;
+  }
+
+  .sunset-label {
+    left: 334px;
+    top: 220px;
+    transform: rotate(-15deg);
+  }
+
+  .sunrise-label {
+    left: 345px;
+    top: 475px;
+    transform: rotate(-15deg);
+  }
+
+  .anno {
+    position: absolute;
+    background: white;
+    padding: 0 12px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.08;
+    letter-spacing: 8px;
+  }
+
+  .anno sup { font-size: .5em; }
+  .earliest { left: 365px; top: 355px; }
+  .shortest { left: 585px; top: 298px; }
+  .latest { left: 790px; top: 292px; }
+
+  .note {
+    position: absolute;
+    right: 125px;
+    bottom: 150px;
+    width: 430px;
+    text-align: center;
+    background: white;
+    font-size: 30px;
+    line-height: 1.18;
+  }
+
+  .note strong {
+    display: block;
+    font-weight: 900;
+    letter-spacing: 8px;
+  }
+
+  .dates {
+    position: absolute;
+    left: 215px;
+    right: 88px;
+    bottom: 12px;
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-size: 29px;
+    font-weight: 900;
+  }
+
+  .dates span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 3px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    font-family: Georgia, serif;
+    font-size: 82px;
+    font-weight: 900;
+    line-height: .72;
+  }
+
+  .logo small {
+    display: block;
+    margin-top: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="diagram">
+    <div class="title1">Sunrise &amp; Sunset times around the</div>
+    <div class="title2">Winter Solstice 2021/2</div>
+
+    <svg viewBox="0 0 1125 845" role="img" aria-label="Sunrise and sunset diagram around winter solstice">
+      <defs>
+        <marker id="arrowUp" markerWidth="12" markerHeight="12" refX="6" refY="2" orient="auto" markerUnits="strokeWidth">
+          <path d="M 0 10 L 6 0 L 12 10 z" fill="#8e44cc" />
+        </marker>
+        <marker id="arrowDown" markerWidth="12" markerHeight="12" refX="6" refY="10" orient="auto" markerUnits="strokeWidth">
+          <path d="M 0 2 L 6 12 L 12 2 z" fill="#8e44cc" />
+        </marker>
+      </defs>
+
+      <!-- plot area -->
+      <rect x="125" y="145" width="875" height="585" fill="white" />
+
+      <!-- grid -->
+      <g stroke="#d7d7d7" stroke-width="1.3">
+        <line x1="125" y1="145" x2="125" y2="730" />
+        <line x1="234" y1="145" x2="234" y2="730" />
+        <line x1="344" y1="145" x2="344" y2="730" />
+        <line x1="453" y1="145" x2="453" y2="730" />
+        <line x1="563" y1="145" x2="563" y2="730" />
+        <line x1="672" y1="145" x2="672" y2="730" />
+        <line x1="781" y1="145" x2="781" y2="730" />
+        <line x1="891" y1="145" x2="891" y2="730" />
+        <line x1="1000" y1="145" x2="1000" y2="730" />
+
+        <line x1="125" y1="145" x2="1000" y2="145" />
+        <line x1="125" y1="218" x2="1000" y2="218" />
+        <line x1="125" y1="291" x2="1000" y2="291" />
+        <line x1="125" y1="364" x2="1000" y2="364" />
+        <line x1="125" y1="437" x2="1000" y2="437" />
+        <line x1="125" y1="510" x2="1000" y2="510" />
+        <line x1="125" y1="583" x2="1000" y2="583" />
+        <line x1="125" y1="656" x2="1000" y2="656" />
+        <line x1="125" y1="730" x2="1000" y2="730" />
+      </g>
+
+      <!-- sunset dots -->
+      <g fill="#ff1b00">
+        <circle cx="125" cy="267" r="7.5"/><circle cx="147" cy="276" r="7.5"/><circle cx="169" cy="284" r="7.5"/><circle cx="191" cy="291" r="7.5"/><circle cx="213" cy="298" r="7.5"/><circle cx="235" cy="303" r="7.5"/><circle cx="257" cy="308" r="7.5"/><circle cx="279" cy="312" r="7.5"/><circle cx="301" cy="315" r="7.5"/><circle cx="323" cy="317" r="7.5"/><circle cx="345" cy="319" r="7.5"/><circle cx="367" cy="319" r="7.5"/><circle cx="389" cy="318" r="7.5"/><circle cx="411" cy="317" r="7.5"/><circle cx="433" cy="315" r="7.5"/><circle cx="455" cy="312" r="7.5"/><circle cx="477" cy="309" r="7.5"/><circle cx="499" cy="305" r="7.5"/><circle cx="521" cy="300" r="7.5"/><circle cx="543" cy="294" r="7.5"/><circle cx="565" cy="288" r="7.5"/><circle cx="587" cy="281" r="7.5"/><circle cx="609" cy="274" r="7.5"/><circle cx="631" cy="266" r="7.5"/><circle cx="653" cy="258" r="7.5"/><circle cx="675" cy="249" r="7.5"/><circle cx="697" cy="239" r="7.5"/><circle cx="719" cy="229" r="7.5"/><circle cx="741" cy="218" r="7.5"/><circle cx="763" cy="207" r="7.5"/><circle cx="785" cy="195" r="7.5"/><circle cx="807" cy="181" r="7.5"/><circle cx="829" cy="166" r="7.5"/><circle cx="851" cy="150" r="7.5"/><circle cx="873" cy="133" r="7.5"/><circle cx="895" cy="116" r="7.5"/><circle cx="917" cy="99" r="7.5"/><circle cx="939" cy="81" r="7.5"/><circle cx="961" cy="62" r="7.5"/><circle cx="983" cy="43" r="7.5"/>
+      </g>
+
+      <!-- sunrise dots -->
+      <g fill="#ffa312" stroke="#ff8c00" stroke-width="1">
+        <circle cx="125" cy="693" r="7.5"/><circle cx="147" cy="676" r="7.5"/><circle cx="169" cy="660" r="7.5"/><circle cx="191" cy="644" r="7.5"/><circle cx="213" cy="628" r="7.5"/><circle cx="235" cy="613" r="7.5"/><circle cx="257" cy="598" r="7.5"/><circle cx="279" cy="584" r="7.5"/><circle cx="301" cy="570" r="7.5"/><circle cx="323" cy="557" r="7.5"/><circle cx="345" cy="545" r="7.5"/><circle cx="367" cy="534" r="7.5"/><circle cx="389" cy="523" r="7.5"/><circle cx="411" cy="513" r="7.5"/><circle cx="433" cy="504" r="7.5"/><circle cx="455" cy="496" r="7.5"/><circle cx="477" cy="488" r="7.5"/><circle cx="499" cy="481" r="7.5"/><circle cx="521" cy="475" r="7.5"/><circle cx="543" cy="470" r="7.5"/><circle cx="565" cy="465" r="7.5"/><circle cx="587" cy="461" r="7.5"/><circle cx="609" cy="457" r="7.5"/><circle cx="631" cy="454" r="7.5"/><circle cx="653" cy="451" r="7.5"/><circle cx="675" cy="449" r="7.5"/><circle cx="697" cy="447" r="7.5"/><circle cx="719" cy="446" r="7.5"/><circle cx="741" cy="445" r="7.5"/><circle cx="763" cy="444" r="7.5"/><circle cx="785" cy="445" r="7.5"/><circle cx="807" cy="446" r="7.5"/><circle cx="829" cy="447" r="7.5"/><circle cx="851" cy="449" r="7.5"/><circle cx="873" cy="452" r="7.5"/><circle cx="895" cy="456" r="7.5"/><circle cx="917" cy="461" r="7.5"/><circle cx="939" cy="467" r="7.5"/><circle cx="961" cy="474" r="7.5"/><circle cx="983" cy="482" r="7.5"/><circle cx="1005" cy="490" r="7.5"/>
+      </g>
+
+      <!-- arrows -->
+      <line x1="368" y1="503" x2="368" y2="337" stroke="#8e44cc" stroke-width="6" marker-end="url(#arrowUp)" />
+      <line x1="565" y1="423" x2="565" y2="300" stroke="#8e44cc" stroke-width="6" marker-end="url(#arrowUp)" />
+      <line x1="565" y1="300" x2="565" y2="423" stroke="#8e44cc" stroke-width="6" marker-end="url(#arrowDown)" />
+      <line x1="764" y1="224" x2="764" y2="397" stroke="#8e44cc" stroke-width="6" marker-end="url(#arrowDown)" />
+    </svg>
+
+    <div class="axis-left">08:05<br>08:00<br>07:55<br>07:50<br>07:45</div>
+    <div class="axis-right">16:10<br>16:05<br>16:00<br>15:55<br>15:50</div>
+
+    <div class="label-big sunset-label">Sunset time</div>
+    <div class="label-big sunrise-label">Sunrise time</div>
+
+    <div class="anno earliest">Earliest<br>Sunset<br>12<sup>th</sup> Dec</div>
+    <div class="anno shortest">Shortest<br>Day<br>21<sup>st</sup> Dec</div>
+    <div class="anno latest">Latest<br>Sunrise<br>30<sup>th</sup> Dec</div>
+
+    <div class="note"><strong>For Brighton</strong>the Sun rises ~2m40s earlier<br>and sets ~3m45s later<br>compared to London!</div>
+
+    <div class="dates">
+      <span>06 Dec</span><span>11 Dec</span><span>16 Dec</span><span>21 Dec</span><span>26 Dec</span><span>31 Dec</span><span>05 Jan</span><span>10 Jan</span>
+    </div>
+
+    <div class="logo">US<small>UNIVERSITY<br>OF SUSSEX</small></div>
+  </div>
+</body>
+</html>

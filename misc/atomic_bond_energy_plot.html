@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atomic spacing energy curve</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    canvas {
+      width: 880px;
+      height: 640px;
+      max-width: 95vw;
+      max-height: 90vh;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="plot" width="880" height="640"></canvas>
+
+  <script>
+    const canvas = document.getElementById("plot");
+    const ctx = canvas.getContext("2d");
+
+    const W = canvas.width;
+    const H = canvas.height;
+
+    const margin = { left: 110, right: 80, top: 40, bottom: 70 };
+    const plotW = W - margin.left - margin.right;
+    const plotH = H - margin.top - margin.bottom;
+
+    const xMin = 0.35;
+    const xMax = 3.35;
+    const yMin = -1.2;
+    const yMax = 1.2;
+
+    function sx(x) {
+      return margin.left + ((x - xMin) / (xMax - xMin)) * plotW;
+    }
+
+    function sy(y) {
+      return margin.top + ((yMax - y) / (yMax - yMin)) * plotH;
+    }
+
+    // Normalised power-law potential with minimum -1 at x = 1.
+    // U(x) = A/x^n - B/x^m, with n=9, m=3, equilibrium spacing a=1.
+    // Constants are chosen so U(1)=-1 and dU/dx at 1 is zero.
+    const n = 9;
+    const m = 3;
+    const A = m / (n - m);      // 0.5
+    const B = n / (n - m);      // 1.5
+
+    function U(x) {
+      return A / Math.pow(x, n) - B / Math.pow(x, m);
+    }
+
+    function drawGrid() {
+      ctx.strokeStyle = "rgba(0,0,0,0.10)";
+      ctx.lineWidth = 2;
+
+      const xGrid = [0.5, 1, 1.5, 2, 2.5, 3];
+      const yGrid = [-1, -0.5, 0, 0.5, 1];
+
+      for (const x of xGrid) {
+        ctx.beginPath();
+        ctx.moveTo(sx(x), sy(yMin));
+        ctx.lineTo(sx(x), sy(yMax));
+        ctx.stroke();
+      }
+
+      for (const y of yGrid) {
+        ctx.beginPath();
+        ctx.moveTo(sx(xMin), sy(y));
+        ctx.lineTo(sx(xMax), sy(y));
+        ctx.stroke();
+      }
+    }
+
+    function drawAxes() {
+      const xAxisY = sy(0);
+      const yAxisX = sx(xMin);
+
+      ctx.strokeStyle = "rgba(0,0,0,0.70)";
+      ctx.lineWidth = 2.5;
+
+      ctx.beginPath();
+      ctx.moveTo(yAxisX, sy(yMin));
+      ctx.lineTo(yAxisX, sy(yMax));
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(sx(xMin), xAxisY);
+      ctx.lineTo(sx(xMax), xAxisY);
+      ctx.stroke();
+
+      // Small upward ticks on x-axis
+      ctx.strokeStyle = "rgba(0,0,0,0.75)";
+      ctx.lineWidth = 2;
+      for (const x of [0.5, 1, 1.5, 2, 2.5, 3]) {
+        ctx.beginPath();
+        ctx.moveTo(sx(x), xAxisY);
+        ctx.lineTo(sx(x), xAxisY - 8);
+        ctx.stroke();
+      }
+    }
+
+    function drawLabels() {
+      ctx.fillStyle = "rgba(0,0,0,0.78)";
+      ctx.font = "24px Arial";
+      ctx.textAlign = "right";
+      ctx.textBaseline = "middle";
+
+      for (const y of [-1, -0.5, 0, 0.5, 1]) {
+        ctx.fillText(String(y), sx(xMin) - 12, sy(y));
+      }
+
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      for (const x of [0.5, 1, 1.5, 2, 2.5, 3]) {
+        ctx.fillText(String(x), sx(x), sy(0) + 14);
+      }
+
+      ctx.save();
+      ctx.translate(42, H / 2);
+      ctx.rotate(-Math.PI / 2);
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("Energy (eV)", 0, 0);
+      ctx.restore();
+
+      ctx.textAlign = "left";
+      ctx.textBaseline = "middle";
+      ctx.fillText("spacing (nm)", sx(2.72), sy(0.13));
+    }
+
+    function drawCurve() {
+      ctx.strokeStyle = "#0879c6";
+      ctx.lineWidth = 4;
+      ctx.lineJoin = "round";
+      ctx.lineCap = "round";
+
+      ctx.beginPath();
+      let first = true;
+
+      for (let px = sx(0.72); px <= sx(xMax); px += 1) {
+        const x = xMin + ((px - margin.left) / plotW) * (xMax - xMin);
+        const y = U(x);
+
+        // Clip the very high repulsive wall just above the visible range.
+        if (y > yMax + 0.1) continue;
+
+        const py = sy(y);
+        if (first) {
+          ctx.moveTo(px, py);
+          first = false;
+        } else {
+          ctx.lineTo(px, py);
+        }
+      }
+
+      ctx.stroke();
+    }
+
+    function render() {
+      ctx.clearRect(0, 0, W, H);
+      drawGrid();
+      drawAxes();
+      drawLabels();
+      drawCurve();
+    }
+
+    render();
+  </script>
+</body>
+</html>
